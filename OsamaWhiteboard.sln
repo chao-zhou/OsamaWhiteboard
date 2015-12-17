@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsamaWhiteboard", "OsamaWhiteboard\OsamaWhiteboard.csproj", "{71DC16DC-A727-4E4E-8EF5-EE234CB1FA80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Dev|Any CPU = Dev|Any CPU
+		QA|Any CPU = QA|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Stage|Any CPU = Stage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71DC16DC-A727-4E4E-8EF5-EE234CB1FA80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71DC16DC-A727-4E4E-8EF5-EE234CB1FA80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71DC16DC-A727-4E4E-8EF5-EE234CB1FA80}.Dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{71DC16DC-A727-4E4E-8EF5-EE234CB1FA80}.Dev|Any CPU.Build.0 = Debug|Any CPU
+		{71DC16DC-A727-4E4E-8EF5-EE234CB1FA80}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{71DC16DC-A727-4E4E-8EF5-EE234CB1FA80}.QA|Any CPU.Build.0 = Release|Any CPU
+		{71DC16DC-A727-4E4E-8EF5-EE234CB1FA80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71DC16DC-A727-4E4E-8EF5-EE234CB1FA80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71DC16DC-A727-4E4E-8EF5-EE234CB1FA80}.Stage|Any CPU.ActiveCfg = Release|Any CPU
+		{71DC16DC-A727-4E4E-8EF5-EE234CB1FA80}.Stage|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

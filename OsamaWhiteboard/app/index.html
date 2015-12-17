@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html ng-app="osama">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiteboard</title>
+    <link href="libraries/jquery-ui/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="tabeebPlayer/tabeebPlayer.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="whiteboardPlugin" style="width: 1000px; height: 500px"></div>
+
+    <script src="libraries/dist/libraries.min.js"></script>
+
+    <script src="tabeebPlayer/vendor/adapterjs/publish/adapter.debug.js"></script>
+    <script src="tabeebPlayer/vendor/videojs/video.dev.js"></script>
+    <script src="tabeebPlayer/vendor/videojs/youtube.js"></script>
+    <script src="tabeebPlayer/vendor/videojs/plugins/media.vimeo.js"></script>
+    <script src="tabeebPlayer/vendor/azureMediaPlayer/azuremediaplayer.min.js?"></script>
+
+    <script src="tabeebPlayer/tabeebPlayerUtil.js"></script>
+    <script src="tabeebPlayer/tabeebPlayerEnums.js"></script>
+    <script src="tabeebPlayer/util/tabeebAnnotationManager.js"></script>
+    <script src="tabeebPlayer/tabeebPlayerInput.js"></script>
+    <script src="tabeebPlayer/canvas/tabeebPlayerCanvas.js"></script>
+
+    <script src="tabeebPlayer/vendor/hammer/hammer.js"></script>
+    <script src="tabeebPlayer/canvas/tabeebHotspotManager.js"></script>
+    <script src="tabeebPlayer/canvas/ShapeCollisions.js"></script>
+    <script src="tabeebPlayer/hud/tabeebHUD.js"></script>
+    <script src="tabeebPlayer/canvas/annotations/Annotations.js"></script>
+    <script src="tabeebPlayer/canvas/DrawingExtensions.js"></script>
+    <script src="tabeebPlayer/canvas/annotations/ShapeAnnotation.js"></script>
+    <script src="tabeebPlayer/canvas/annotations/StrokeAnnotation.js"></script>
+    <script src="tabeebPlayer/canvas/annotations/TextAnnotation.js"></script>
+    <script src="tabeebPlayer/canvas/annotations/LineAnnotation.js"></script>
+    <script src="tabeebPlayer/canvas/annotations/ArrowLineAnnotation.js"></script>
+    <script src="tabeebPlayer/canvas/annotations/CalloutAnnotation.js"></script>
+    <script src="tabeebPlayer/canvas/annotations/HotspotAnnotation.js"></script>
+    <script src="tabeebPlayer/canvas/annotations/CircleAnnotation.js"></script>
+    <script src="tabeebPlayer/canvas/annotations/RectangleAnnotation.js"></script>
+    <script src="tabeebPlayer/sidebar/tabeebSidebar.js"></script>
+    <script src="tabeebPlayer/sidebar/tabs/tabeebSocialTab.js"></script>
+    <script src="tabeebPlayer/misc/tabeebUndoManager.js"></script>
+    <script src="tabeebPlayer/hud/tabeebNavigationBar.js"></script>
+    <script src="tabeebPlayer/hud/tabeebControlBar.js"></script>
+    <script src="tabeebPlayer/hud/tabeebPalettePopup.js"></script>
+    <script src="tabeebPlayer/hud/tabeebAudioRecordingBar.js"></script>
+    <script src="tabeebPlayer/tabeebPlayer.js" id="tabeebPlayerJS"></script>
+    <script src="tabeebPlayer/tabeebPlayerAPI.js"></script>
+    <script src="tabeebPlayer/gallery/tabeebGallery.js"></script>
+    <script src="tabeebPlayer/tabeebPlayerVideo.js"></script>
+    <script src="tabeebPlayer/pdf/PDFManager.js"></script>
+    <script src="tabeebPlayer/tabeebPlayerAudio.js"></script>
+    <script src="tabeebPlayer/tabeebPlayerPresenter.js"></script>
+    <script src="tabeebPlayer/users/tabeebUserManager.js"></script>
+    <script src="tabeebPlayer/users/tabeebChatService.js"></script>
+    <script src="tabeebPlayer/sidebar/tabs/tabeebChatPanel.js"></script>
+    <script src="tabeebPlayer/sidebar/tabs/tabeebUsersPanel.js"></script>
+    <script src="tabeebPlayer/sidebar/tabs/tabeebPresentationPanel.js"></script>
+    <script src="tabeebPlayer/sidebar/tabs/tabeebActivitiesPanel.js"></script>
+    <script src="tabeebPlayer/users/tabeebInviteDialog.js"></script>
+    <script src="tabeebPlayer/vendor/recorderjs/recorder.js"></script>
+    <script src="tabeebPlayer/vendor/recorderjs/recorderWorker.js"></script>
+    <script src="tabeebPlayer/vendor/pdfjs/build/pdf.js"></script>
+    <script src="tabeebPlayer/vendor/pdfjs/build/pdf.worker.js"></script>
+    <script src="tabeebPlayer/vendor/pdfjs/web/text_layer_builder.js"></script>
+    <script src="tabeebPlayer/vendor/pdfjs/web/ui_utils.js"></script>
+
+    <!-- WebRtc files -->
+    <script src="tabeebConnect/config.js"></script>
+    <script src="tabeebConnect/jitsimeetEvents.js"></script>
+    <script src="tabeebConnect/libs/strophe/strophe.min.js?v=2"></script>
+    <script src="tabeebConnect/libs/strophe/strophe.disco.min.js?v=1"></script>
+    <script src="tabeebConnect/libs/strophe/strophe.caps.jsonly.min.js?v=1"></script>
+    <script src="tabeebConnect/webrtc/DetectRTC.min.js"></script>
+    <script src="tabeebConnect/libs/RTCBrowserType.js"></script>
+    <script src="tabeebConnect/tabeebConnect.js" id="tabeebConnectJS"></script>
+
+    <script src="index.js"></script>
+      
+
+</body>
+</html>
