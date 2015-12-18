@@ -1,0 +1,83 @@
+.tabeebChatPanel .tabeebChatPanelHeader {
+  display: table;
+  width: 100%;
+  padding: 5px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.tabeebChatPanel .tabeebChatPanelHeader span {
+  font-family: 'tabeeb';
+  font-size: 16px;
+}
+.tabeebChatPanel textarea {
+  color: white;
+  background: #343439;
+  resize: none;
+  width: 95%;
+  margin: auto;
+  border-color: #585973;
+  margin-top: 5px;
+}
+.tabeebChatPanel textarea::-webkit-input-placeholder {
+  color: #767999;
+  text-align: center;
+}
+.tabeebChatPanel textarea::-moz-placeholder {
+  color: #767999;
+  text-align: center;
+}
+.tabeebChatPanel textarea:-ms-input-placeholder {
+  color: #767999;
+  text-align: center;
+}
+.tabeebChatPanel .tabeebChatMessagesContainer {
+  padding: 0 15px;
+  padding-bottom: 25px;
+  height: 100%;
+  justify-content: flex-end;
+  margin-bottom: 0;
+}
+.tabeebChatPanel .tabeebChatMessagesContainer li {
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+  margin-top: 5px;
+}
+.tabeebChatPanel .tabeebChatMessagesContainer .tabeebDateTime {
+  width: 100%;
+  text-align: center;
+  color: #95979d;
+  margin: auto;
+  margin-top: 15px;
+  display: block;
+}
+.tabeebChatPanel .tabeebChatMessagesContainer .tabeebChatName {
+  font-style: italic;
+  color: gray;
+  font-size: 75%;
+}
+.tabeebChatPanel .tabeebChatMessagesContainer {
+  overflow-y: auto;
+}
+.tabeebChatPanel .tabeebAvatar {
+  max-width: 40px;
+  max-height: 40px;
+}
+.tabeebChatPanel .tabeebAvatar span {
+  font-size: 13px;
+}
+.tabeebChatPanel .tabeebAvatar img {
+  border-radius: 50%;
+  max-width: 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.tabeebChatPanel .tabeebChatMessageText {
+  background: #343439;
+  color: #ffffff;
+  padding: 10px 5px;
+  border-radius: 3px;
+  margin-left: 15px;
+  word-break: break-all;
+}

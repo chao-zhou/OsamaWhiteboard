@@ -1,0 +1,188 @@
+@import "variables.less";
+
+.presenting, .spectating {
+  .tabeebPresentationPanel {
+    .tabeebControls {
+      display: table;
+    }
+  }
+}
+
+.spectating {
+  .tabeebPresentationPanel {
+    border-bottom: 1px solid gray;
+  }
+}
+
+.tabeebPresentationPanel {
+  text-align: center;
+  position: relative;
+
+  &.video {
+    img, .tabeebBlankAvatar {
+      display: none !important;
+    }
+  }
+
+  [class^='col-'] {
+    padding: 0;
+  }
+
+  .tabeebPresenterName {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 3px 8px;
+    background: rgba(20, 20, 20, 0.5);
+    font-size: 10px;
+    word-wrap: break-word;
+    max-width: 50%;
+    display: table;
+  }
+
+  .tabeebPresenterInfo {
+    font-size: 12px;
+
+    span {
+      word-break: break-all;
+    }
+
+    img, .tabeebBlankAvatar {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin-right: 3px;
+    }
+  }
+
+  video, object {
+    width: 100%;
+    margin-top: 15px;
+    max-height: 100%;
+    margin-bottom: 15px;
+    display: table;
+  }
+
+  .tabeebBlankAvatar {
+    margin: auto;
+  }
+  img {
+    margin-top: 15px;
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .tabeebControls {
+    font-family: @iconFontFamily;
+    font-size: 16px;
+    display: none;
+    margin-top: 15px;
+    width: 100%;
+
+    .tabeebControl {
+      cursor: pointer;
+      background: @active-hud-color;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      margin: auto;
+      color: darken(@active-hud-color, 20%);
+
+      &:hover {
+        background: darken(@active-hud-color, 5%);
+      }
+
+      &.disabled {
+        color: white;
+        background: red;
+      }
+    }
+
+    .tabeebToggleAudioButton {
+    }
+
+    .tabeebToggleVideoButton {
+      //font-size: 10px;
+    }
+
+    .tabeebEndCallButton {
+      background: red;
+      color: white;
+      &:hover {
+        background: darken(red, 5%);
+      }
+    }
+  }
+
+  .tabeebPresentationTopControls {
+    span {
+      text-align: center;
+      color: lightgray;
+      cursor: pointer;
+      position: absolute;
+      left: 5px;
+      top: -8px;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .tabeebPresenterBottomControls {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+    width: 100%;
+    padding-top: 5px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    > span {
+      padding: 15px;
+      text-align: center;
+      color: lightgray;
+      line-height: 2em;
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .tabeebShareControlsContainer {
+      width: 100%;
+      background: darken(@active-hud-color, 20%);
+      height: 40px;
+      line-height: 37px;
+      padding-right: 15px;
+      text-align: right;
+
+      .btn-no-decoration {
+        color: white;
+        background: none;
+        border: none;
+        text-align: left;
+        &:hover {
+          color: lightgrey;
+        }
+      }
+
+      .btn-tabeeb {
+        background: @active-hud-color;
+        border-color: @active-hud-color;
+        color: rgb(100,100,100);
+        &:hover {
+          background: lighten(@active-hud-color, 5%);
+          border-color: lighten(@active-hud-color, 5%);
+        }
+      }
+    }
+
+  }
+}
+

@@ -1,0 +1,59 @@
+<div class="hotspotDialog tabeebScrollable" id="tabeebHotspotContainer" title="Hotspot">
+    <div class="tabeebDeleteAnnotationButton icon-trash-empty" style="position: absolute; bottom: 10px; right: 10px; z-index: 5;"></div>
+    <div class="hotspotDialogBody">
+    </div>
+    <div class="hotspotReplyButton btn btn-sm tabeebCustomBGColor">
+        Reply
+    </div>
+    <div class="hotspotDialogHeader" style="display: none;">
+        <div class="tabeebTable" style="margin-top: -10px">
+            <div class="tabeebTableRow">
+                <div class="tabeebTableCell" style="display: block; margin-top: 30px; padding-left: 25px; padding-right: 12px;">
+                    <img class="hotspotThumbnail" width="50px" height="50px">
+                </div>
+                <div class="tabeebTableCell" style="width: 100%;">
+                    <div class="hotspotDialogTabs" style="padding: 0;">
+                        <ul style="padding-left: 5px !important;">
+                            <li class=""><a href="#text-tab"><span class="glyphicon icon-text-t" style="font-family: 'tabeeb'"></span></a></li>
+                            <li class=""><a href="#audio-tab"><span class="glyphicon icon-mic" style="font-family: 'tabeeb'; font-size: 20px;"></span></a></li>
+                        </ul>
+
+                        <div id="text-tab" style="height: 35px;">
+                            <div style="padding-right: 30px;">
+                                <textarea class="hotspotDialogTextInput" placeholder="Reply here..." maxlength="2500"></textarea>
+                            </div>
+                            <div style="display: flex">
+                                <button class="hotspotDialogTextSubmitButton tabeebCustomBGColor">Send</button>
+                                <button class="hotspotDialogTextCancelButton">Cancel</button>
+                            </div>
+                        </div>
+
+                        <div class="tabeebHotspotAudioTab" id="audio-tab">
+                            <div style="padding-right: 30px;">
+                                <div class="tabeebHotspotAudioControls" style="height: 126.5px;">
+                                    <span class="hotspotDialogAudioTimer">00:00:00</span>
+                                    <span class="tabeebHotspotRecordingIndicator" style="display: none; line-height: 30px; vertical-align: text-bottom; margin-left: 15px; border-bottom: 3px solid rgb(222, 91, 77); color: rgb(222, 91, 77);">Recording</span>
+                                    <div class="hotspotDialogRecordingVolume tabeebCustomBGColor"></div>
+                                    <div>
+                                        <span class="tabeebHotspotRecordingButtons">
+                                            <div class="hotspotDialogPauseRecordingButton glyphicon-pause disabled" style="font-family: 'Glyphicons Halflings'"></div>
+                                            <div class="hotspotDialogRecordButton icon-filled_circle"></div>
+                                            <div class="hotspotDialogPlayAudioRecordingButton icon-play disabled"></div>
+                                        </span>
+                                        <div class="tabeebHotspotResetAudioButton glyphicon glyphicon-repeat" style="font-family: 'Glyphicons Halflings'; transform: scaleX(-1); margin-left: 15px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="hotspotDialogAudioSubmitButton tabeebCustomBGColor disabled">Send</button>
+                            <button class="hotspotDialogTextCancelButton" style="margin-left: -6px;">Cancel</button>
+
+                            <!--<span class="hotspotDialogRecordButton icon-mic"></span><span class="tabeebHotspotInstructions" style="font-size: 12px; color: gray;"> - Press To Record</span>-->
+                            <!--<div class="hotspotDialogAudioTimer"></div>-->
+                            <div class="hotspotDialogAudioSpinner"><img src="https://s3.amazonaws.com/media.feastly/static/image/spinner.gif"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

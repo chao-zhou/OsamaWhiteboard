@@ -1,0 +1,449 @@
+@iconFontFamily: "tabeeb";
+@navigationButtonColor: rgba(0, 0, 0, 0.5);
+
+@dialog-border-color: lightgray;
+@dialog-bg-color: white;
+
+@body-border-color: rgba(0, 0, 0, 0.5);
+
+@active-tab-color: white;
+
+@audio-theme-color: rgb(222, 91, 77);
+@send-button-color: rgb(144, 198, 167);
+
+@tab-height: 178px;
+
+.hotspotThumbnail {
+  border-radius: 50%;
+  max-width: 50px;
+  max-height: 50px;
+  span {
+    font-size: 13px;
+  }
+}
+
+//<editor-fold name="Dialog">
+
+.hotspotDialog {
+  //min-height: 100% !important;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100% !important;
+  overflow: hidden !important;
+  padding: 10px !important;
+
+  .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    //margin-bottom: 3px;
+    padding-bottom: 0;
+  }
+}
+
+.hotspotDialog.ui-dialog-content {
+  padding: 0;
+}
+
+.ui-dialog {
+  overflow: visible !important;
+}
+
+//</editor-fold>
+
+//<editor-fold name="Text Tab">
+#text-tab, #audio-tab {
+  height: @tab-height !important;
+  min-height: @tab-height;
+  overflow: visible !important;
+  border-radius: 3px !important;
+  padding: 5px;
+
+  textarea.hotspotDialogTextInput {
+    border: 1px solid @send-button-color;
+    border-radius: 3px;
+    resize: none;
+    width: 100%;
+    height: 126.5px;
+    margin-right: 35px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  button {
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: none;
+    width: 102px;
+    height: 35px;
+    outline: 0 !important;
+    margin-top: 5px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .hotspotDialogTextSubmitButton, .hotspotDialogAudioSubmitButton {
+    background: #54cf99;
+    color: white;
+
+    &.disabled {
+      background: gray !important;
+    }
+  }
+
+  .hotspotDialogTextCancelButton, .hotspotDialogAudioCancelButton {
+    background: none;
+    text-decoration: underline;
+    color: slategray;
+  }
+
+  .disabled {
+    cursor: not-allowed !important;
+    background: rgb(210, 210, 210);
+  }
+}
+//</editor-fold>
+//<editor-fold name="Audio Tab">
+#audio-tab {
+  .tabeebHotspotAudioControls {
+    border-radius: 4px;
+    padding: 12px 25px;
+    border: 1px solid @send-button-color;
+  }
+
+  button {
+    margin-top: 9.5px;
+  }
+
+  &.recording {
+    .tabeebHotspotAudioControls {
+      border: 1px solid @audio-theme-color;
+    }
+  }
+
+  .tabeebHotspotRecordingButtons {
+
+    div {
+      font-size: 16px;
+      line-height: 32px;
+      border-radius: 50%;
+      width: 32px;
+      color: @audio-theme-color;
+      height: 32px;
+      text-align: center;
+      border: 1px solid @audio-theme-color;
+      display: inline-block;
+      cursor: pointer;
+      font-family: @iconFontFamily;
+      margin: 0 5px;
+    }
+
+    .hotspotDialogRecordButton {
+      width: 40px;
+      height: 40px;
+      line-height: 38px;
+      color: @audio-theme-color;
+      background: white;
+
+      &.active {
+        background: @audio-theme-color;
+        color: white;
+      }
+
+      &.disabled {
+        //background: darken(white, 25%);
+        background: rgb(210, 210, 210);;
+      }
+    }
+
+    .hotspotDialogPauseRecordingButton {
+      line-height: 26px;
+      &::before {
+
+      }
+    }
+  }
+  .tabeebHotspotResetAudioButton {
+    border: none;
+    font-size: 14px;
+    color: rgb(144, 180, 199);
+    cursor: pointer;
+  }
+
+}
+//</editor-fold>
+
+//<editor-fold name="Tabbed Panel">
+
+.hotspotDialogHeader {
+  min-height: 160px;
+}
+
+.hotspotDialogTabs {
+  background: none !important;
+  border-radius: 0 !important;
+  li {
+    font-size: 24px;
+  }
+
+  .ui-tabs-nav {
+    padding: 0 !important;
+  }
+
+  .ui-tabs-anchor {
+    padding-bottom: 0 !important;
+  }
+
+  .ui-widget-header {
+    border: none !important;
+    background: none !important;
+  }
+
+  .ui-widget-content {
+    background: @active-tab-color !important;
+    border-radius: 0 !important;
+  }
+
+  ul li {
+    border: none !important;
+    background: none !important;
+    border-radius: 0 !important;
+    margin: 1px 0.5em !important;
+    a {
+      color: gray !important;
+      padding: 0.5em 5px !important;
+      //padding: 0.5em 0.5em !important;
+    }
+  }
+
+  ul li:hover {
+  }
+
+  ul li {
+    height: 30px;
+    width: 30px;
+    padding-bottom: 1px;
+    margin-bottom: 10px !important;
+
+    span {
+      width: 20px;
+      text-align: center;
+      line-height: 0;
+      height: 15px;
+      margin-bottom: -1px;
+    }
+
+    &.ui-tabs-active {
+      a {
+        border-bottom: 3px solid red;
+        color: black !important;
+      }
+    }
+
+  }
+}
+
+.hotspotDialogTabs .ui-tabs-panel {
+  padding: 0;
+}
+
+//</editor-fold>
+
+
+.hotspotDialogBody {
+  overflow-y: auto;
+  //min-height: 150px;
+  height: auto;
+  max-height: 300px;
+  border-radius: 2px;
+  img, .tabeebBlankAvatar {
+    max-width: 2em;
+    display: table;
+  }
+}
+
+.hotspotDialogRecordingVolume {
+  color: #54cf99;
+  background: #54cf99;
+  height: 15px;
+  width: 0;
+  margin-left: 10px;
+}
+
+.tabeebHotspotMessage {
+
+  margin: 5px 0;
+  clear: left;
+  word-wrap: break-word;
+  float: left;
+  position: relative;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 15px;
+  font-size: 12px;
+
+  audio {
+    margin-bottom: 15px;
+  }
+
+  &:hover {
+    .deleteButton {
+      display: block;
+    }
+  }
+
+  &.highlighted {
+    background: rgb(210, 210, 210);
+    p {
+      border-bottom: 1px solid;
+    }
+    .deleteButton {
+      display: block;
+    }
+  }
+
+  img, .tabeebBlankAvatar {
+    float: left;
+    min-width: 32px;
+    margin: 3px;
+    display: block;
+    height: 32px;
+    margin-right: 6px;
+    font-size: 10px;
+  }
+
+  .tabeebBlankAvatar {
+    display: table;
+  }
+
+  img:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  p {
+    word-wrap: break-word;
+    white-space: pre;
+    overflow: hidden;
+    padding-left: 5px;
+    color: gray;
+    border-bottom: 1px solid lightgray;
+
+    strong {
+      color: rgb(100, 100, 100);
+      line-height: 25px
+    }
+  }
+
+  &:last-of-type {
+    margin: 0;
+    p {
+      border-bottom: none;
+    }
+  }
+
+
+  .deleteButton {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    display: none;
+    border-radius: 25%;
+    background: white;
+    top: auto;
+  }
+
+  .deleteButton.mobile {
+    right: 25px;
+    background: rgb(210,210,210);
+    display: block;
+  }
+
+  .hotspotDateString {
+    color: rgb(150,150,150);
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+}
+
+.hotspotDialogFullscreenButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.hotspotDialogRecordButton:hover {
+  color: black;
+}
+
+.hotspotDialogRecordButton.active {
+  color: red;
+}
+
+.hotspotDialogAudioTimer {
+  padding-left: 10px;
+  font-size: 32px;
+  color: gray;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.hotspotArrow, .hotspotArrowBorder {
+  width: 0;
+  height: 0;
+  top: 50px;
+  left: -10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  border-right: 10px solid @dialog-bg-color;
+  position: absolute;
+}
+
+.hotspotArrowBorder {
+  left: -11px;
+  border-right: 10px solid @dialog-border-color;
+}
+
+.hotspotDialogAudioSpinner {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  display: none;
+  img {
+    max-width: 100%;
+  }
+}
+
+.hotspotDialogScrollButtonContainer {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+  background: white;
+  z-index: 100;
+}
+
+.hotspotDialogScrollUpButton {
+  height: 50%;
+  border: 1px solid;
+  top: 42%
+}
+
+.hotspotDialogScrollDownButton {
+  height: 50%;
+  border: 1px solid;
+  top: 42%
+}
+
+.tabeebDialog {
+  z-index: 1031 !important;
+  min-height: 100px;
+}

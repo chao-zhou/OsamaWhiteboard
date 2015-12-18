@@ -1,0 +1,82 @@
+@import "variables.less";
+
+@background-color: rgb(75, 75, 75);
+@border-color: rgb(50, 50, 50);
+
+@button-color: white;
+@button-hover-color: rgb(220, 220, 220);
+@button-disabled-color: darkgray;
+@horizontalButtonPadding: 10px;
+
+//<editor-fold name="Mobile">
+
+.mobile {
+  .tabeebNavigationBar {
+    max-height: @hud-mobile-button-size;
+  }
+
+  .tabeebNavigationItem {
+    font-size: @mobile-button-font-size;
+  }
+
+  .tabeebControlBarButtonContainer {
+  }
+}
+
+//</editor-fold name="Mobile">
+
+.drawing .tabeebNavigationBar {
+  pointer-events: none !important;
+}
+
+.tabeebNavigationItem.tabeebHotspotButton {
+  font-size: 26px;
+  //font-family: "Glyphicons Halflings";
+  display: inline-table !important;
+  padding: 5px 0;
+  //&:before {
+  //  content: "\e146";
+  //}
+}
+
+.tabeebNavigationBar {
+  width: auto;
+
+  span, div {
+    font-family: @iconFontFamily;
+    padding: 0 @horizontalButtonPadding;
+    line-height: @hud-button-size;
+    &:hover {
+      color: @button-hover-color;
+    }
+  }
+
+  .tabeebSlideIndexContainer, .tabeebZoomIndicator {
+    font-size: 16px;
+    vertical-align: top;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .tabeebSlideIndexContainer {
+    padding: 5px;
+    border-radius: 3px;
+    background: darken(@hud-background-color, 25);
+  }
+}
+
+.tabeebPlayingAudio {
+  .tabeebNavigationBar {
+    opacity: 0 !important;
+  }
+}
+
+.tabeebSelectionButton.selected {
+  color: @active-hud-color !important;
+}
+
+.spectating {
+  .tabeebGalleryModeToggleButton, .tabeebPreviousMediaButton, .tabeebNextMediaButton
+  {
+    display: none !important;
+  }
+}

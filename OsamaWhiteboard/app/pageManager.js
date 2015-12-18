@@ -2,6 +2,9 @@
     PageManager = function (opt) {
         this.origin = location.origin;
         this.previewImageURL = "https://api.qunitjs.com/jquery-wp-content/themes/jquery/images/logo-qunit@2x.png";
+
+        //Be sure to enable CORS (for local testing, I use the chrome extension Allow-Control-Allow-Origin
+        //https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi
         this.pdfURL = "https://modelica.org/events/modelica2012/authors-guide/example-abstract.pdf";
 
         this.pageWidth = 595;

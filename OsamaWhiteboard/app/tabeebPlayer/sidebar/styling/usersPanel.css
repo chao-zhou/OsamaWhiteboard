@@ -1,0 +1,139 @@
+.mobile .tabeebUsersPanel .tabeebUser .tabeebPanelControls div {
+  opacity: 1;
+}
+.tabeebUsersPanel {
+  overflow-y: auto;
+  padding-top: 15px;
+}
+.tabeebUsersPanel .tabeebCurrentlySpeaking {
+  color: lightgray;
+  font-size: 11px;
+}
+.tabeebUsersPanel .tabeebCurrentlySpeaking span {
+  font-family: 'tabeeb';
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: -8px;
+}
+.tabeebUsersPanel div {
+  margin: 5px 0;
+}
+.tabeebUsersPanel .tabeebUserContainer video,
+.tabeebUsersPanel .tabeebUserContainer object {
+  display: none !important;
+  max-width: 100%;
+}
+.tabeebUsersPanel .tabeebUserContainer img {
+  display: block !important;
+  max-height: 100%;
+}
+.tabeebUsersPanel .tabeebUserContainer.video video,
+.tabeebUsersPanel .tabeebUserContainer.video object {
+  display: block !important;
+}
+.tabeebUsersPanel .tabeebUserContainer.video img {
+  display: none !important;
+}
+.tabeebUsersPanel .tabeebUser {
+  position: relative;
+  margin-bottom: 15px;
+  background: #474956;
+  height: 100%;
+}
+.tabeebUsersPanel .tabeebUser img,
+.tabeebUsersPanel .tabeebUser video,
+.tabeebUsersPanel .tabeebUser object {
+  margin: auto;
+  height: 100%;
+}
+.tabeebUsersPanel .tabeebUser span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 3px 8px;
+  background: rgba(20, 20, 20, 0.5);
+  font-size: 10px;
+  word-wrap: break-word;
+  max-width: 50%;
+}
+.tabeebUsersPanel .tabeebUser .tabeebBlankAvatar span {
+  font-size: 16px;
+}
+.tabeebUsersPanel .tabeebUser .tabeebPanelControls {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-family: 'tabeeb';
+  font-size: 16px;
+}
+.tabeebUsersPanel .tabeebUser .tabeebPanelControls div {
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  display: inline-block;
+  background: #c8d90d;
+  line-height: 25px;
+  text-align: center;
+  transition: opacity 0.2s ease-in;
+  margin: 2px;
+}
+.tabeebUsersPanel .tabeebUser .tabeebPanelControls div.disabled {
+  background: #4b4b4b;
+}
+.tabeebUsersPanel .tabeebUser:hover .tabeebPanelControls div {
+  opacity: 1;
+  pointer-events: all;
+}
+.tabeebUsersPanel .video .tabeebUserAvatar,
+.tabeebUsersPanel .video .tabeebBlankAvatar {
+  display: none !important;
+}
+.tabeebUsersPanel .tabeebInviteUser {
+  width: 100%;
+  background: #474956;
+  height: 100%;
+  font-family: 'tabeeb';
+  position: relative;
+  color: #7c7daa;
+  cursor: pointer;
+}
+.tabeebUsersPanel .tabeebInviteUser:hover span {
+  color: #9b9cbe;
+  border-color: #9b9cbe;
+}
+.tabeebUsersPanel .tabeebInviteUser span {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 34px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px dashed #7c7daa;
+  transition: color 0.2s ease-in, border-color 0.2s ease-in;
+}
+.tabeebOnlineIndicator {
+  display: none;
+}
+.presenting .offline .tabeebOnlineIndicator,
+.spectating .offline .tabeebOnlineIndicator {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(20, 20, 20, 0.5);
+}
+.audioMuted .tabeebAudioIndicator {
+  opacity: 1 !important;
+}

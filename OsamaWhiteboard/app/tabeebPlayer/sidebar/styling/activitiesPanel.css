@@ -1,0 +1,106 @@
+.tabeebActivitiesPanel {
+  padding: 0 0 25px 0;
+  height: 100%;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  overflow-y: auto;
+}
+.tabeebActivitiesPanel .tabeebBlankAvatar {
+  max-width: 40px;
+  max-height: 40px;
+}
+.tabeebActivitiesPanel .tabeebBlankAvatar span {
+  font-size: 12px;
+}
+.tabeebActivitiesPanel li {
+  padding: 7px;
+  width: 100%;
+  display: block;
+}
+.tabeebActivitiesPanel li:hover {
+  background: #5a5a5a;
+}
+.tabeebActivitiesPanel li .tabeebActivitiesMessage {
+  margin-left: 15px;
+}
+.tabeebActivitiesPanel li .tabeebActivitiesMessage img,
+.tabeebActivitiesPanel li .tabeebActivitiesMessage .tabeebBlankAvatar {
+  margin-right: 15px;
+}
+.tabeebActivitiesPanel li .tabeebActivitiesPageNumber,
+.tabeebActivitiesPanel li .tabeebDateTime {
+  padding-bottom: 15px;
+  border-bottom: 1px solid lightslategray;
+}
+.tabeebActivitiesPanel li .tabeebActivitiesPageNumber {
+  color: #d7a55a;
+  display: inline-block;
+  width: 50%;
+  padding-left: 70px;
+}
+.tabeebActivitiesPanel li .tabeebDateTime {
+  color: #aaaaaa;
+  display: inline-block;
+  width: 50%;
+  padding-right: 15px;
+  text-align: right;
+}
+.tabeebActivitiesPanel .tabeebActivitiesAlignWithAvatar {
+  padding-left: 55px;
+}
+.tabeebActivitiesPanel .tabeebTodayIndicator {
+  background: #3dba8f;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  margin-left: 5px;
+}
+.tabeebActivitiesPanel .tabeebActivitiesPlayButton {
+  font-family: 'tabeeb';
+  cursor: pointer;
+  display: inline-table;
+  margin-right: 10px;
+  background: #d86464;
+  border-radius: 50%;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  color: white;
+}
+.tabeebSidebarActivitiesTab button.btn {
+  background: none;
+  border: 1px solid #505050;
+  color: #7b9097;
+}
+.tabeebSidebarActivitiesTab button.btn.active {
+  color: #54cf99;
+}
+.tabeebSidebarActivitiesTab .tabeebCurrentPageButton {
+  min-width: 100px;
+}
+.tabeebSidebarActivitiesTab .tabeebAllPagesButton {
+  min-width: 100px;
+}
+.tabeebPreviewMessage {
+  color: gray;
+  white-space: pre;
+}
+.tabeebFlex {
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+}
+.tabeebActivitiesUserFilter.open button.btn {
+  border: none;
+  color: #54cf99;
+  background: none;
+}
+.tabeebActivitiesUserFilter button.btn {
+  border: none;
+  color: #54cf99;
+}
+.spectating .tabeebActivitiesPanel {
+  cursor: not-allowed;
+}

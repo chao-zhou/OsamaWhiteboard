@@ -1,0 +1,186 @@
+<div class="tabeebPluginContainer tabeebUnselectable loading">
+
+    <!-- Left side - media area -->
+    <div class="tabeebPluginMainArea">
+        <p class="slideTitle tabeebSelectable" style="display: none;">&nbsp;</p>
+
+        <div class="tabeebLargeVideoContainer" style="display: none;">
+            <video autoplay oncontextmenu="return false;"></video>
+        </div>
+        <div class="tabeebMediaContainer">
+
+            <div class="tabeebVideoContainer"></div>
+
+            <canvas class="tabeebCanvas">Browser does not support canvas</canvas>
+
+            <textarea type="text" class="tabeebTextAnnotationInput" cols="1" rows="1"></textarea>
+
+            <div class="tabeebTextAssetContainer tabeebScrollable" style="display:none">
+                <p class="tabeebTextAsset" contenteditable="true"></p>
+            </div>
+
+            <div class="tabeebAudioContainer tabeebScrollable">
+                <div class="tabeebAudioGalleryContainer tabeebScrollable"></div>
+                <div class="tabeebAudioPlayerContainer" style="display: none;">
+                    <audio controls="controls"></audio>
+                </div>
+            </div>
+
+            <div class="tabeebAnnotationEditor" style="display: none;">
+                <div class="tabeebDeleteAnnotationButton icon-trash-empty" style="text-align: center;"></div>
+                <div class="tabeebEditAnnotationTextButton icon-text-t" style="text-align: center;"></div>
+            </div>
+        </div>
+
+        <div class="tabeebGalleryContainer tabeebScrollable"></div>
+
+        <div class="tabeebDrawModeButton icon-draw-mode tabeebScreenMode tabeebHUD tabeebCustomBGColorOnActive tabeebBottomHUD" data-screenmode="Draw/Navigation"></div>
+        <!--<div class="tabeebRecordingButton tabeebMicrophoneButton icon-mic tabeebHUD"></div>-->
+        <div class="tabeebAudioGalleryButton tabeebAudioGalleryContainerToggle tabeebHUD tabeebCustomBGColorOnActive tabeebBottomHUD" title="Audio Gallery">
+            <span class="icon-voice-message"></span>
+            <div class="tabeebAudioAnnotationBadge badge"></div>
+        </div>
+
+        <div class="tabeebHUD tabeebControlBar">
+            <div class="tabeebControlBarItems">
+                <!--<div class="tabeebControlBarButtonContainer icon-hand tabeebSelectionButton tabeebDrawMode tabeebCustomColorOnActive" title="Selection" data-drawmode="Selection"></div>-->
+                <div class="tabeebControlBarButtonContainer tabeebOptionsButton icon-tint" title="Options" data-popup-toggle="options"></div>
+                <div class="tabeebDrawMode tabeebControlBarButtonContainer tabeebPenButton icon-draw-mode tabeebPenColor" title="Pen" data-stroketype="Pen"></div>
+                <div class="tabeebControlBarButtonContainer icon-mic tabeebActivateRecordingBar tabeebMicrophoneButton"></div>
+                <div class="tabeebControlBarButtonContainer tabeebShapeOptionsButton tabeebPenColor icon-rectangle" title="Shapes" data-popup-toggle="shapes"></div>
+                <div class="tabeebDrawMode tabeebControlBarButtonContainer tabeebTextButton icon-text-t tabeebPenColor" title="Text" data-stroketype="Text"></div>
+                <div class="tabeebDrawMode tabeebControlBarButtonContainer tabeebEraserButton icon-eraser-1" title="Eraser" data-stroketype="Eraser"></div>
+                <div class="tabeebDrawMode tabeebControlBarButtonContainer tabeebLaserPointerButton icon-magic" data-drawmode="Pointer"></div>
+
+                <div class="tabeebControlBarButtonContainer tabeebNavigationItem tabeebDefaultMenuItem icon-chat-bubble tabeebDecoratedButton" data-popup-toggle="hotspots" title="Hotspots"></div>
+
+                <div class="tabeebControlBarButtonContainer tabeebUndoButton icon-undo" title="Undo"></div>
+                <div class="tabeebControlBarButtonContainer tabeebRedoButton icon-redo" title="Redo"></div>
+            </div>
+
+        </div>
+
+        <div class="tabeebHUD tabeebDrawingPalette" style="display: none;" data-popup-name="options">
+            <div class="tabeebPaletteColors">
+            </div>
+
+            <div class="tabeebTable tabeebDrawingPaletteTable">
+                <div class="tabeebTableRow tabeebDrawingPaletteTableStrokeSizeRow" align="center">
+                    <div class="tabeebTableCell" style="width: 30px; height: 35px; vertical-align: middle;">
+                        <div class="tabeebStrokeSizePreview"></div>
+                    </div>
+                    <div class="tabeebTableCell">
+                        <input class="tabeebStrokeSizeInput" type="range" min="2" max="24" step="1" value="10" />
+                    </div>
+                </div>
+                <div class="tabeebTableRow">
+                    <div class="tabeebTableCell" style="position: relative; height: 35px;">
+                        <div class="tabeebTransparencyPreview">
+                            <div class="tabeebPreviewTriangleTopLeft"></div>
+                            <div class="tabeebPreviewTriangleBottomRight"></div>
+                        </div>
+                    </div>
+                    <div class="tabeebTableCell" style="vertical-align: middle;">
+                        <input class="tabeebTransparencyInput" type="range" min="10" max="100" step="10" value="100" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabeebHUD tabeebShapeOptions" style="display: none;" data-popup-name="hotspots">
+            <div class="tabeebTable">
+                <div class="tabeebTableRow">
+                    <div class="tabeebTableCell" style="width: 33%;">
+                        <div class="tabeebHotspotItem tabeebHotspotButton icon-chat-bubble tabeebDrawMode tabeebDecoratedButton" data-stroketype="Hotspot" title="Hotspots"></div>
+                    </div>
+                    <div class="tabeebTableCell" style="width: 33%;">
+                        <div class="tabeebHotspotItem icon-rectangle tabeebPenColor" data-stroketype="Rectangle_Hotspot" title="Rectangle"></div>
+                    </div>
+                    <div class="tabeebTableCell" style="width: 33%;">
+                        <div class="tabeebHotspotItem icon-circle33 tabeebPenColor" data-stroketype="Ellipse_Hotspot" title="Ellipse"></div>
+                    </div>
+                </div>
+                <div class="tabeebTableRow">
+                    <div class="tabeebTableCell" style="width: 33%;">
+                        <div class="tabeebHotspotItem icon-draw-mode tabeebPenColor" title="Pen" data-stroketype="Pen_Hotspot"></div>
+                    </div>
+                    <div class="tabeebTableCell" style="width: 33%;">
+                        <div class="tabeebHotspotItem icon-line_one_arrow tabeebPenColor" data-stroketype="ArrowEnd_Hotspot" title="Arrow"></div>
+                    </div>
+                    <div class="tabeebTableCell" style="width: 33%;">
+                        <div class="tabeebHotspotItem icon-line-1 tabeebPenColor" data-stroketype="Line_Hotspot" title="Line    "></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabeebHUD tabeebShapeOptions" style="display: none;" data-popup-name="shapes">
+            <div class="tabeebTable tabeebDrawingPaletteTable">
+                <div class="tabeebTableRow">
+                    <div class="tabeebTableCell" style="width: 25%;">
+                        <div class="tabeebShapeItem icon-circle33 tabeebPenColor" data-stroketype="Ellipse" title="Ellipse"></div>
+                    </div>
+                    <div class="tabeebTableCell" style="width: 25%;">
+                        <div class="tabeebShapeItem icon-filled_circle tabeebPenColor" data-stroketype="Ellipse_Filled" title="Filled Ellipse"></div>
+                    </div>
+                    <div class="tabeebTableCell" style="width: 25%;">
+                        <div class="tabeebShapeItem icon-line-1 tabeebPenColor" data-stroketype="Line" title="Line"></div>
+                    </div>
+                    <div class="tabeebTableCell" style="width: 25%;">
+                        <div class="tabeebShapeItem icon-callout tabeebPenColor" data-stroketype="Callout" title="Callout"></div>
+                    </div>
+                </div>
+                <div class="tabeebTableRow">
+                    <div class="tabeebTableCell" style="width: 25%;">
+                        <div class="tabeebShapeItem icon-rectangle tabeebPenColor" data-stroketype="Rectangle" title="Rectangle"></div>
+                    </div>
+                    <div class="tabeebTableCell" style="width: 25%;">
+                        <div class="tabeebShapeItem icon-filled_rectangle tabeebPenColor" data-stroketype="Rectangle_Filled" title="Filled Rectangle"></div>
+                    </div>
+                    <div class="tabeebTableCell" style="width: 25%;">
+                        <div class="tabeebShapeItem icon-line_one_arrow tabeebPenColor" data-stroketype="ArrowEnd" title="Arrow"></div>
+                    </div>
+                    <div class="tabeebTableCell" style="width: 25%;">
+                        <div class="tabeebShapeItem icon-line_two_arrows tabeebPenColor" data-stroketype="ArrowBoth" title="Arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabeebHUD tabeebNavigationBar tabeebNavigationBarButton tabeebBottomHUD">
+            <span class="tabeebPreviousMediaButton icon-left"></span>
+            <span class="tabeebNextMediaButton icon-right"></span>
+            <span class="tabeebSlideIndexContainer">0 / 0</span>
+            <span class="tabeebZoomInButton tabeebHideOnMobile icon-zoom-in"></span>
+            <span class="tabeebZoomOutButton tabeebHideOnMobile icon-zoom-out"></span>
+            <span class="tabeebZoomIndicator">100%</span>
+            <span class="tabeebScreenMode tabeebGalleryModeToggleButton icon-th-large" data-screenmode="Gallery" title="Gallery"></span>
+        </div>
+
+        <div class="tabeebAudioRecordingBar tabeebHUD">
+            <div class="tabeebVolumeIndicator tabeebCustomBGColor"></div>
+            <div class="tabeebAudioRecordingTimer"></div>
+        </div>
+
+
+    </div>
+    <div class="tabeebScreenShareContainer" style="display: none;">
+        <video oncontextmenu="return false;" autoplay="autoplay"></video>
+    </div>
+
+
+    <div class="tabeebSidebarContainer"></div>
+
+    <!--<div class="tabeebHUD tabeebNavigationBar" style="">-->
+        <!--<div class="tabeebNavigationItem tabeebDrawMode tabeebSelectionButton" data-drawmode="Selection" title="Select"><span class="icon-hand"></span></div>-->
+        <!--<div class="tabeebNavigationItem tabeebPreviousMediaButton icon-left"><a title="Previous Slide"></a></div>-->
+        <!--<div class="tabeebNavigationItem tabeebNextMediaButton icon-right"><a title="Next Slide"></a></div>-->
+        <!--&lt;!&ndash;<span class="tabeebNavigationItem tabeebLaserPointerButton tabeebPenColor tabeebDefaultMenuItem tabeebDrawMode icon-magic" data-drawmode="Pointer"></span>&ndash;&gt;-->
+        <!--&lt;!&ndash;<span class="tabeebNavigationItem tabeebMicrophoneButton icon-speak textboard-only"></span>&ndash;&gt;-->
+        <!--<div class="tabeebNavigationItem tabeebSlideIndexContainer" title="Gallery">0 / 0</div>-->
+        <!--<div title="Zoom in" class="tabeebNavigationItem tabeebZoomInButton icon-zoom-in"></div>-->
+        <!--<div title="Zoom out" class="tabeebNavigationItem tabeebZoomOutButton icon-zoom-out"></div>-->
+        <!--<div class="tabeebNavigationItem tabeebSlideIndexContainer tabeebZoomIndicator">100%</div>-->
+        <!--<div class="tabeebNavigationItem icon-th-large tabeebGalleryModeButton"></div>-->
+    <!--</div>-->
+</div>

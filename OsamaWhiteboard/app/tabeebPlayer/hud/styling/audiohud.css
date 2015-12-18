@@ -1,0 +1,68 @@
+.tabeebAudioRecordingBar {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  border-radius: 3px;
+  min-width: 200px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  background: #4b4b4b;
+  color: #ffffff;
+  overflow: hidden;
+  pointer-events: none;
+}
+.tabeebAudioRecordingBar .tabeebVolumeIndicator {
+  max-width: 100%;
+  background: #c8d90d;
+  height: 100%;
+}
+.tabeebAudioRecordingBar .tabeebAudioRecordingTimer {
+  font-size: 16px;
+  line-height: 50px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  top: 0;
+}
+.tabeebRecordingButton {
+  position: absolute;
+  color: #ffffff;
+  background: #4b4b4b;
+  bottom: 15px;
+  left: 75px;
+  font-family: 'tabeeb';
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+}
+.drawing .tabeebAudioRecordingBar {
+  opacity: 0 !important;
+}
+.tabeebRecording .tabeebRecordingButton {
+  background: #c8d90d;
+}
+.tabeebRecording .tabeebAudioRecordingBar {
+  display: block;
+  opacity: 1 !important;
+}
+.tabeebRecording .tabeebNavigationBar {
+  opacity: 0 !important;
+}
+.tabeebRecording.drawing .tabeebAudioRecordingBar {
+  opacity: 0.5 !important;
+}
+.tabeebAudioAnnotationBadge {
+  position: absolute;
+  pointer-events: none;
+  top: -5px;
+  right: -5px;
+  background: #0089cf;
+}
+.tabeebAudioPlayerContainer {
+  z-index: 10;
+}

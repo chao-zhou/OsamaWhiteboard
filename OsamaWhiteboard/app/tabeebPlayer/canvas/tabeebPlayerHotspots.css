@@ -1,0 +1,356 @@
+.hotspotThumbnail {
+  border-radius: 50%;
+  max-width: 50px;
+  max-height: 50px;
+}
+.hotspotThumbnail span {
+  font-size: 13px;
+}
+.hotspotDialog {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100% !important;
+  overflow: hidden !important;
+  padding: 10px !important;
+}
+.hotspotDialog .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  padding-bottom: 0;
+}
+.hotspotDialog.ui-dialog-content {
+  padding: 0;
+}
+.ui-dialog {
+  overflow: visible !important;
+}
+#text-tab,
+#audio-tab {
+  height: 178px !important;
+  min-height: 178px;
+  overflow: visible !important;
+  border-radius: 3px !important;
+  padding: 5px;
+}
+#text-tab textarea.hotspotDialogTextInput,
+#audio-tab textarea.hotspotDialogTextInput {
+  border: 1px solid #90c6a7;
+  border-radius: 3px;
+  resize: none;
+  width: 100%;
+  height: 126.5px;
+  margin-right: 35px;
+  padding: 10px;
+  font-size: 12px;
+}
+#text-tab button,
+#audio-tab button {
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: none;
+  width: 102px;
+  height: 35px;
+  outline: 0 !important;
+  margin-top: 5px;
+}
+#text-tab button:hover,
+#audio-tab button:hover {
+  text-decoration: underline;
+}
+#text-tab .hotspotDialogTextSubmitButton,
+#audio-tab .hotspotDialogTextSubmitButton,
+#text-tab .hotspotDialogAudioSubmitButton,
+#audio-tab .hotspotDialogAudioSubmitButton {
+  background: #54cf99;
+  color: white;
+}
+#text-tab .hotspotDialogTextSubmitButton.disabled,
+#audio-tab .hotspotDialogTextSubmitButton.disabled,
+#text-tab .hotspotDialogAudioSubmitButton.disabled,
+#audio-tab .hotspotDialogAudioSubmitButton.disabled {
+  background: gray !important;
+}
+#text-tab .hotspotDialogTextCancelButton,
+#audio-tab .hotspotDialogTextCancelButton,
+#text-tab .hotspotDialogAudioCancelButton,
+#audio-tab .hotspotDialogAudioCancelButton {
+  background: none;
+  text-decoration: underline;
+  color: slategray;
+}
+#text-tab .disabled,
+#audio-tab .disabled {
+  cursor: not-allowed !important;
+  background: #d2d2d2;
+}
+#audio-tab .tabeebHotspotAudioControls {
+  border-radius: 4px;
+  padding: 12px 25px;
+  border: 1px solid #90c6a7;
+}
+#audio-tab button {
+  margin-top: 9.5px;
+}
+#audio-tab.recording .tabeebHotspotAudioControls {
+  border: 1px solid #de5b4d;
+}
+#audio-tab .tabeebHotspotRecordingButtons div {
+  font-size: 16px;
+  line-height: 32px;
+  border-radius: 50%;
+  width: 32px;
+  color: #de5b4d;
+  height: 32px;
+  text-align: center;
+  border: 1px solid #de5b4d;
+  display: inline-block;
+  cursor: pointer;
+  font-family: "tabeeb";
+  margin: 0 5px;
+}
+#audio-tab .tabeebHotspotRecordingButtons .hotspotDialogRecordButton {
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  color: #de5b4d;
+  background: white;
+}
+#audio-tab .tabeebHotspotRecordingButtons .hotspotDialogRecordButton.active {
+  background: #de5b4d;
+  color: white;
+}
+#audio-tab .tabeebHotspotRecordingButtons .hotspotDialogRecordButton.disabled {
+  background: #d2d2d2;
+}
+#audio-tab .tabeebHotspotRecordingButtons .hotspotDialogPauseRecordingButton {
+  line-height: 26px;
+}
+#audio-tab .tabeebHotspotResetAudioButton {
+  border: none;
+  font-size: 14px;
+  color: #90b4c7;
+  cursor: pointer;
+}
+.hotspotDialogHeader {
+  min-height: 160px;
+}
+.hotspotDialogTabs {
+  background: none !important;
+  border-radius: 0 !important;
+}
+.hotspotDialogTabs li {
+  font-size: 24px;
+}
+.hotspotDialogTabs .ui-tabs-nav {
+  padding: 0 !important;
+}
+.hotspotDialogTabs .ui-tabs-anchor {
+  padding-bottom: 0 !important;
+}
+.hotspotDialogTabs .ui-widget-header {
+  border: none !important;
+  background: none !important;
+}
+.hotspotDialogTabs .ui-widget-content {
+  background: #ffffff !important;
+  border-radius: 0 !important;
+}
+.hotspotDialogTabs ul li {
+  border: none !important;
+  background: none !important;
+  border-radius: 0 !important;
+  margin: 1px 0.5em !important;
+}
+.hotspotDialogTabs ul li a {
+  color: gray !important;
+  padding: 0.5em 5px !important;
+}
+.hotspotDialogTabs ul li {
+  height: 30px;
+  width: 30px;
+  padding-bottom: 1px;
+  margin-bottom: 10px !important;
+}
+.hotspotDialogTabs ul li span {
+  width: 20px;
+  text-align: center;
+  line-height: 0;
+  height: 15px;
+  margin-bottom: -1px;
+}
+.hotspotDialogTabs ul li.ui-tabs-active a {
+  border-bottom: 3px solid red;
+  color: black !important;
+}
+.hotspotDialogTabs .ui-tabs-panel {
+  padding: 0;
+}
+.hotspotDialogBody {
+  overflow-y: auto;
+  height: auto;
+  max-height: 300px;
+  border-radius: 2px;
+}
+.hotspotDialogBody img,
+.hotspotDialogBody .tabeebBlankAvatar {
+  max-width: 2em;
+  display: table;
+}
+.hotspotDialogRecordingVolume {
+  color: #54cf99;
+  background: #54cf99;
+  height: 15px;
+  width: 0;
+  margin-left: 10px;
+}
+.tabeebHotspotMessage {
+  margin: 5px 0;
+  clear: left;
+  word-wrap: break-word;
+  float: left;
+  position: relative;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 15px;
+  font-size: 12px;
+}
+.tabeebHotspotMessage audio {
+  margin-bottom: 15px;
+}
+.tabeebHotspotMessage:hover .deleteButton {
+  display: block;
+}
+.tabeebHotspotMessage.highlighted {
+  background: #d2d2d2;
+}
+.tabeebHotspotMessage.highlighted p {
+  border-bottom: 1px solid;
+}
+.tabeebHotspotMessage.highlighted .deleteButton {
+  display: block;
+}
+.tabeebHotspotMessage img,
+.tabeebHotspotMessage .tabeebBlankAvatar {
+  float: left;
+  min-width: 32px;
+  margin: 3px;
+  display: block;
+  height: 32px;
+  margin-right: 6px;
+  font-size: 10px;
+}
+.tabeebHotspotMessage .tabeebBlankAvatar {
+  display: table;
+}
+.tabeebHotspotMessage img:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.tabeebHotspotMessage p {
+  word-wrap: break-word;
+  white-space: pre;
+  overflow: hidden;
+  padding-left: 5px;
+  color: gray;
+  border-bottom: 1px solid lightgray;
+}
+.tabeebHotspotMessage p strong {
+  color: #646464;
+  line-height: 25px;
+}
+.tabeebHotspotMessage:last-of-type {
+  margin: 0;
+}
+.tabeebHotspotMessage:last-of-type p {
+  border-bottom: none;
+}
+.tabeebHotspotMessage .deleteButton {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  display: none;
+  border-radius: 25%;
+  background: white;
+  top: auto;
+}
+.tabeebHotspotMessage .deleteButton.mobile {
+  right: 25px;
+  background: #d2d2d2;
+  display: block;
+}
+.tabeebHotspotMessage .hotspotDateString {
+  color: #969696;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.hotspotDialogFullscreenButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.hotspotDialogRecordButton:hover {
+  color: black;
+}
+.hotspotDialogRecordButton.active {
+  color: red;
+}
+.hotspotDialogAudioTimer {
+  padding-left: 10px;
+  font-size: 32px;
+  color: gray;
+  font-family: "Courier New", Courier, monospace;
+}
+.hotspotArrow,
+.hotspotArrowBorder {
+  width: 0;
+  height: 0;
+  top: 50px;
+  left: -10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #ffffff;
+  position: absolute;
+}
+.hotspotArrowBorder {
+  left: -11px;
+  border-right: 10px solid #d3d3d3;
+}
+.hotspotDialogAudioSpinner {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  display: none;
+}
+.hotspotDialogAudioSpinner img {
+  max-width: 100%;
+}
+.hotspotDialogScrollButtonContainer {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+  background: white;
+  z-index: 100;
+}
+.hotspotDialogScrollUpButton {
+  height: 50%;
+  border: 1px solid;
+  top: 42%;
+}
+.hotspotDialogScrollDownButton {
+  height: 50%;
+  border: 1px solid;
+  top: 42%;
+}
+.tabeebDialog {
+  z-index: 1031 !important;
+  min-height: 100px;
+}

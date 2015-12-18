@@ -1,0 +1,87 @@
+@import "variables.less";
+
+.tabeebPluginMainArea {
+  float: left;
+}
+
+@import "presentationPanel.less";
+
+@import "usersPanel.less";
+
+@import "chatPanel.less";
+
+@import "socialTab.less";
+
+@import "activitiesPanel.less";
+
+.pagePlugin:not(.presenting) {
+  .tabeebPresenterModeButton {
+    display: none !important;
+  }
+}
+
+.pagePlugin:not(.spectating) {
+  .tabeebSpectatorModeButton {
+    display: none !important;
+  }
+}
+
+.spectating {
+  .tabeebPresenterModeButton {
+    display: none !important;
+  }
+}
+
+.presenting {
+  .tabeebSpectatorModeButton {
+    display: none !important;
+  }
+}
+
+.offline {
+  .tabeebUserOnlineButton {
+    display: none !important;
+  }
+}
+
+.pagePlugin.spectating, .pagePlugin.presenting {
+  .tabeebHideOnPresentationMode {
+    display: none !important;
+  }
+}
+
+.tabeebSidebarPanel {
+  width: 100%;
+  -moz-user-select: text;
+  -khtml-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.tabeebRoundedUserAvatar {
+  width: @avatar-icon-size;
+  height: @avatar-icon-size;
+  border-radius: 50%;
+}
+
+.nav.nav-tabs {
+  li {
+    a {
+      padding: 5px 15px;
+      color: #7b9097;
+    }
+    a:hover {
+      background: none !important;
+    }
+
+    &.active {
+      a {
+        color: #54cf99;
+      }
+      a:hover {
+        background: white !important;
+      }
+    }
+  }
+}

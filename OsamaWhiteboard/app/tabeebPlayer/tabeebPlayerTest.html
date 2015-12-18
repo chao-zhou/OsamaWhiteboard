@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../Content/css/styles.css" />
+    <link href="tabeebPlayer.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+<div class="pagePlugin" style="width: 1000px; height: 500px">
+
+</div>
+<div>
+    <ul id="log"></ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js?"></script>
+<!--<script src="../bower_components/jquery/dist/jquery.js"></script>-->
+<script src="../bower_components/jquery-ui/jquery-ui.js"></script>
+
+
+<script src="vendor/videojs/video.dev.js"></script>
+<script src="vendor/videojs/youtube.js"></script>
+<script src="vendor/recorderjs/recorder.js"></script>
+<script src="vendor/recorderjs/recorderWorker.js"></script>
+<!--<script src="tabeebPlayer.min.js" id="tabeebPlayerJS"></script>-->
+<script src="tabeebPlayerUtil.js"></script>
+<script src="tabeebPlayerEnums.js"></script>
+<script src="util/tabeebAnnotationManager.js"></script>
+<script src="tabeebPlayerInput.js"></script>
+<script src="canvas/tabeebPlayerCanvas.js"></script>
+<script src="canvas/ShapeCollisions.js"></script>
+<script src="canvas/annotations/Annotations.js"></script>
+<script src="misc/tabeebUndoManager.js"></script>
+<script src="tabeebPlayer.js" id="tabeebPlayerJS"></script>
+<script src="tabeebPlayerVideo.js"></script>
+<script src="tabeebPlayerAudio.js"></script>
+<script src="tabeebPlayerPresenter.js"></script>
+
+<script type="text/javascript">
+
+    function log(msg) {
+        $('#log').append('<li>' + msg + '</li>');
+    }
+
+    var annotationCount = 1;
+    $(document).ready(function()
+    {
+        var opt = {
+            undo: function () { log('undo');},
+            redo: function () { log('redo'); },
+            annotationAdded: function (event,annotation) {
+                log('annotationAdded');
+                annotation.id = annotationCount;
+                annotationCount += 1;
+                $(this).data("tabeebPlayer").addAnnotation(annotation);
+            },
+            annotationDeleted: function () { log('annotationDeleted'); },
+            annotationRestored: function () { log('annotationRestored'); },
+            annotationUpdateRestored: function () { log('annotationUpdateRestored'); },
+            previousMedia: function () { log('previousMedia'); },
+            nextMedia: function () { log('nextMedia'); },
+            contentDisplayed: function () { log('contentDisplayed'); },
+            annotationsDisplayed: function () { log('annotationsDisplayed'); },
+            loaded: function () {
+                log('loaded');
+                $(this).data("tabeebPlayer").setContent({
+                    annotations: "",
+                    title: "TEST WB",
+                    nextEnabled: true,
+                    previousEnabled: true,
+                    url: "",
+                    whiteboardType: TabeebWhiteBoardType.Normal,
+                    text: "",
+                    slideIndex: 0
+                });
+            },
+            error: function () { log('error'); },
+            galleryRequested: function () { log('galleryRequested'); },
+            setMedia: function () { log('setMedia'); },
+            deletePage: function () { log('deletePage'); },
+            audioRecordingAdded: function () { log('audioRecordingAdded'); },
+            penColorChanged: function () { log('penColorChanged'); },
+            textContentChanged: function () { log('textContentChanged'); },
+            annotationsUpdated: function () { log('annotationsUpdated'); },
+
+            controlBarPosition: "left",
+            rightPanelWidth: 0,
+            defaultDrawModeType: TabeebDrawModeType.Pen,
+            defaultScreenModeType: TabeebScreenModeType.Navigation,
+            maxZoomLevel: 2.0
+        };
+
+
+        var player = $(".pagePlugin").tabeebPlayer(opt);
+        //{
+        //    //controlBarPosition: "top",
+        //    //sizeChange: function(event, params)
+        //    //{
+        //    //    console.log("element " + params.element.id + " changed size by " + params.delta);
+        //    //}
+
+        //    loaded: function () {
+
+        //    },
+        //});
+
+    });
+
+    $(window).resize(function()
+    {
+        $(".pagePlugin").data("tabeebPlayer").parentSizeChanged();
+    });
+</script>
+</body>
+</html>

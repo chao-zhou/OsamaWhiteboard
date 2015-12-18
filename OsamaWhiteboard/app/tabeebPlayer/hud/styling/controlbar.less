@@ -1,0 +1,184 @@
+@import "variables.less";
+
+@color: white;
+@controlBarHeight: 45px;
+@controlBarMobileHeight: 32px;
+
+.tabeebDrawModeButton, .tabeebAudioGalleryButton {
+  position: absolute;
+  bottom: 15px;
+  font-family: @iconFontFamily;
+  background: @hud-background-color;
+  border-radius: 3px;
+  color: @color;
+  transition: opacity .2s ease-in;
+  text-align: center;
+}
+
+.tabeebDrawModeButton {
+  left: 15px;
+}
+
+.tabeebAudioGalleryButton {
+  right: 15px;
+}
+
+.mobile {
+
+  .tabeebDrawModeButton {
+    left: 5px;
+  }
+
+  .tabeebAudioGalleryButton {
+    right: 5px;
+  }
+
+  .tabeebControlBar {
+    font-size: @mobile-button-font-size !important;
+    line-height: @mobile-button-font-size + 10 !important;
+  }
+}
+
+.tabeebControlBarButtonContainer
+{
+  width: @hud-button-size;
+  height: @hud-button-size;
+  position: relative;
+  cursor: pointer;
+  &.vertical {
+    display: block;
+  }
+  &.horizontal {
+    display: inline-block;
+  }
+}
+
+.tabeebControlBar {
+  position: absolute;
+  font-family: @iconFontFamily;
+  font-size: @button-font-size;
+  opacity: 0;
+  height: auto;
+
+  .tabeebControlBarItems {
+    display: inline-table;
+    background: @hud-background-color;
+
+    div {
+      opacity: 0.9;
+      transition: opacity .2s ease-in;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .tabeebControlBarItems {
+    display: table;
+    border-radius: 3px;
+  }
+
+  .tabeebDecoratedButton {
+    font-size: 26px;
+    display: inline-table !important;
+  }
+
+  &.vertical {
+
+    max-width: 50px;
+
+    .tabeebControlBarButtonContainer.tabeebDecoratedButton {
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+      width: 95% !important;
+      padding: 5px 0;
+    }
+
+    .tabeebControlBarItems {
+      border-top: 8px solid @active-hud-color;
+    }
+  }
+
+  &.horizontal {
+
+    max-height: 50px;
+
+    .tabeebControlBarButtonContainer {
+      display: inline-block;
+    }
+
+    .tabeebControlBarButtonContainer.tabeebDecoratedButton {
+      border-left: 1px solid gray;
+      border-right: 1px solid gray;
+      height: 95% !important;
+      padding: 0 5px;
+      display: inline-block;
+    }
+
+    .tabeebControlBarItems {
+      display: inline-table;
+      border-right: 8px solid @active-hud-color;
+    }
+  }
+}
+
+.tabeebDrawModeButton, .tabeebDrawingPalette, .tabeebShapeOptions, .tabeebControlBar {
+  transition: opacity .2s ease-in;
+  font-family: "tabeeb";
+}
+
+//<editor-fold name="Drawing Palette">
+
+.tabeebDrawingPalette {
+  position: absolute;
+  display: table;
+
+  .tabeebPaletteColor:hover {
+    border: 2px solid lightgray;
+    opacity: 0.75;
+  }
+}
+
+//</editor-fold>
+
+//<editor-fold name="Shape Options">
+
+.tabeebShapeOptions {
+  position: absolute;
+  display: table;
+
+  .tabeebShapeItem:hover {
+    opacity: 0.75;
+  }
+}
+
+//</editor-fold>
+
+.drawing .tabeebHUD {
+  pointer-events: none !important;
+  opacity: 0.5;
+}
+
+.tabeebGalleryScreen {
+  .tabeebHUD {
+    display: none !important;
+  }
+}
+
+//.tabeebControlBar.tabeebControlbarTwoPerRow {
+//
+//  &.vertical {
+//    max-width: 100px;
+//    width: 100px;
+//
+//    .tabeebControlBarButtonContainer {
+//      display: inline-block !important;
+//      width: auto !important;
+//    }
+//  }
+//
+//  .tabeebDecoratedButton {
+//    border: none !important;
+//    padding: 0 !important;
+//  }
+//}

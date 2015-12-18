@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="22px" height="22px" viewBox="0 0 22 22" version="1.1">
+    <title>pencil</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs/>
+    <g id="iOS7-active" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M6,18.5524143 C6,19.1051805 6.43788135,19.553286 7.00292932,19.553286 L11.9970706,19.553286 C12.5509732,19.553286 12.9999999,19.1086551 12.9999999,18.5524143 L12.9999999,4.55415765 C12.9999999,4.0013915 12.5621185,3.55328599 11.9970705,3.55328599 L7.00292925,3.55328599 C6.44902668,3.55328599 5.99999993,3.99791685 5.99999993,4.55415765 L6,18.5524143 Z M6,-0.476770888 L6,2.47686997 L12.9989014,2.47686992 L12.9989014,-0.476770935 C12.9989014,-1.47918477 11.9964875,-1.47918477 11.9964875,-1.47918477 L7.00241385,-1.47918472 C7.00241385,-1.47918472 6,-1.47918472 6,-0.476770888 Z M5.9833546,20.5208153 L9.50000003,25.5075707 L12.9984131,20.5208153 L5.9833546,20.5208153 Z" id="pencil" fill="#000000" sketch:type="MSShapeGroup" transform="translate(9.500000, 12.020815) rotate(45.000000) translate(-9.500000, -12.020815) "/>
+    </g>
+</svg>

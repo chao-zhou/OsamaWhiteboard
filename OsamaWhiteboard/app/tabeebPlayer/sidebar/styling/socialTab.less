@@ -1,0 +1,22 @@
+
+.tabeebSidebarContainer {
+  height: 100%;
+  display: inline;
+  float: right;
+  color: @font-color;
+  background: @background-color;
+
+  .tabeebSidebarTab {
+    display: none;
+  }
+
+  &[data-tab='users'] {
+    .tabeebSidebarUsersTab {
+      display: block;
+    }
+  }
+
+  .row {
+    max-width: none !important;
+  }
+}

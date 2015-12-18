@@ -1,0 +1,545 @@
+.tabeebPluginMainArea {
+  float: left;
+}
+.presenting .tabeebPresentationPanel .tabeebControls,
+.spectating .tabeebPresentationPanel .tabeebControls {
+  display: table;
+}
+.spectating .tabeebPresentationPanel {
+  border-bottom: 1px solid gray;
+}
+.tabeebPresentationPanel {
+  text-align: center;
+  position: relative;
+}
+.tabeebPresentationPanel.video img,
+.tabeebPresentationPanel.video .tabeebBlankAvatar {
+  display: none !important;
+}
+.tabeebPresentationPanel [class^='col-'] {
+  padding: 0;
+}
+.tabeebPresentationPanel .tabeebPresenterName {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 3px 8px;
+  background: rgba(20, 20, 20, 0.5);
+  font-size: 10px;
+  word-wrap: break-word;
+  max-width: 50%;
+  display: table;
+}
+.tabeebPresentationPanel .tabeebPresenterInfo {
+  font-size: 12px;
+}
+.tabeebPresentationPanel .tabeebPresenterInfo span {
+  word-break: break-all;
+}
+.tabeebPresentationPanel .tabeebPresenterInfo img,
+.tabeebPresentationPanel .tabeebPresenterInfo .tabeebBlankAvatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 3px;
+}
+.tabeebPresentationPanel video,
+.tabeebPresentationPanel object {
+  width: 100%;
+  margin-top: 15px;
+  max-height: 100%;
+  margin-bottom: 15px;
+  display: table;
+}
+.tabeebPresentationPanel .tabeebBlankAvatar {
+  margin: auto;
+}
+.tabeebPresentationPanel img {
+  margin-top: 15px;
+  height: 100%;
+  max-height: 100%;
+}
+.tabeebPresentationPanel .tabeebControls {
+  font-family: 'tabeeb';
+  font-size: 16px;
+  display: none;
+  margin-top: 15px;
+  width: 100%;
+}
+.tabeebPresentationPanel .tabeebControls .tabeebControl {
+  cursor: pointer;
+  background: #c8d90d;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  margin: auto;
+  color: #6f7907;
+}
+.tabeebPresentationPanel .tabeebControls .tabeebControl:hover {
+  background: #b2c10c;
+}
+.tabeebPresentationPanel .tabeebControls .tabeebControl.disabled {
+  color: white;
+  background: red;
+}
+.tabeebPresentationPanel .tabeebControls .tabeebEndCallButton {
+  background: red;
+  color: white;
+}
+.tabeebPresentationPanel .tabeebControls .tabeebEndCallButton:hover {
+  background: #e60000;
+}
+.tabeebPresentationPanel .tabeebPresentationTopControls span {
+  text-align: center;
+  color: lightgray;
+  cursor: pointer;
+  position: absolute;
+  left: 5px;
+  top: -8px;
+}
+.tabeebPresentationPanel .tabeebPresentationTopControls span:hover {
+  color: white;
+}
+.tabeebPresentationPanel .tabeebPresenterBottomControls {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: left;
+  width: 100%;
+  padding-top: 5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.tabeebPresentationPanel .tabeebPresenterBottomControls > span {
+  padding: 15px;
+  text-align: center;
+  color: lightgray;
+  line-height: 2em;
+  cursor: pointer;
+}
+.tabeebPresentationPanel .tabeebPresenterBottomControls > span:hover {
+  color: white;
+}
+.tabeebPresentationPanel .tabeebPresenterBottomControls .tabeebShareControlsContainer {
+  width: 100%;
+  background: #6f7907;
+  height: 40px;
+  line-height: 37px;
+  padding-right: 15px;
+  text-align: right;
+}
+.tabeebPresentationPanel .tabeebPresenterBottomControls .tabeebShareControlsContainer .btn-no-decoration {
+  color: white;
+  background: none;
+  border: none;
+  text-align: left;
+}
+.tabeebPresentationPanel .tabeebPresenterBottomControls .tabeebShareControlsContainer .btn-no-decoration:hover {
+  color: lightgrey;
+}
+.tabeebPresentationPanel .tabeebPresenterBottomControls .tabeebShareControlsContainer .btn-tabeeb {
+  background: #c8d90d;
+  border-color: #c8d90d;
+  color: #646464;
+}
+.tabeebPresentationPanel .tabeebPresenterBottomControls .tabeebShareControlsContainer .btn-tabeeb:hover {
+  background: #def10f;
+  border-color: #def10f;
+}
+.mobile .tabeebUsersPanel .tabeebUser .tabeebPanelControls div {
+  opacity: 1;
+}
+.tabeebUsersPanel {
+  overflow-y: auto;
+  padding-top: 15px;
+}
+.tabeebUsersPanel .tabeebCurrentlySpeaking {
+  color: lightgray;
+  font-size: 11px;
+}
+.tabeebUsersPanel .tabeebCurrentlySpeaking span {
+  font-family: 'tabeeb';
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: -8px;
+}
+.tabeebUsersPanel div {
+  margin: 5px 0;
+}
+.tabeebUsersPanel .tabeebUserContainer video,
+.tabeebUsersPanel .tabeebUserContainer object {
+  display: none !important;
+  max-width: 100%;
+}
+.tabeebUsersPanel .tabeebUserContainer img {
+  display: block !important;
+  max-height: 100%;
+}
+.tabeebUsersPanel .tabeebUserContainer.video video,
+.tabeebUsersPanel .tabeebUserContainer.video object {
+  display: block !important;
+}
+.tabeebUsersPanel .tabeebUserContainer.video img {
+  display: none !important;
+}
+.tabeebUsersPanel .tabeebUser {
+  position: relative;
+  margin-bottom: 15px;
+  background: #474956;
+  height: 100%;
+}
+.tabeebUsersPanel .tabeebUser img,
+.tabeebUsersPanel .tabeebUser video,
+.tabeebUsersPanel .tabeebUser object {
+  margin: auto;
+  height: 100%;
+}
+.tabeebUsersPanel .tabeebUser span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 3px 8px;
+  background: rgba(20, 20, 20, 0.5);
+  font-size: 10px;
+  word-wrap: break-word;
+  max-width: 50%;
+}
+.tabeebUsersPanel .tabeebUser .tabeebBlankAvatar span {
+  font-size: 16px;
+}
+.tabeebUsersPanel .tabeebUser .tabeebPanelControls {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-family: 'tabeeb';
+  font-size: 16px;
+}
+.tabeebUsersPanel .tabeebUser .tabeebPanelControls div {
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  display: inline-block;
+  background: #c8d90d;
+  line-height: 25px;
+  text-align: center;
+  transition: opacity 0.2s ease-in;
+  margin: 2px;
+}
+.tabeebUsersPanel .tabeebUser .tabeebPanelControls div.disabled {
+  background: #4b4b4b;
+}
+.tabeebUsersPanel .tabeebUser:hover .tabeebPanelControls div {
+  opacity: 1;
+  pointer-events: all;
+}
+.tabeebUsersPanel .video .tabeebUserAvatar,
+.tabeebUsersPanel .video .tabeebBlankAvatar {
+  display: none !important;
+}
+.tabeebUsersPanel .tabeebInviteUser {
+  width: 100%;
+  background: #474956;
+  height: 100%;
+  font-family: 'tabeeb';
+  position: relative;
+  color: #7c7daa;
+  cursor: pointer;
+}
+.tabeebUsersPanel .tabeebInviteUser:hover span {
+  color: #9b9cbe;
+  border-color: #9b9cbe;
+}
+.tabeebUsersPanel .tabeebInviteUser span {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 34px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px dashed #7c7daa;
+  transition: color 0.2s ease-in, border-color 0.2s ease-in;
+}
+.tabeebOnlineIndicator {
+  display: none;
+}
+.presenting .offline .tabeebOnlineIndicator,
+.spectating .offline .tabeebOnlineIndicator {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(20, 20, 20, 0.5);
+}
+.audioMuted .tabeebAudioIndicator {
+  opacity: 1 !important;
+}
+.tabeebChatPanel .tabeebChatPanelHeader {
+  display: table;
+  width: 100%;
+  padding: 5px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.tabeebChatPanel .tabeebChatPanelHeader span {
+  font-family: 'tabeeb';
+  font-size: 16px;
+}
+.tabeebChatPanel textarea {
+  color: white;
+  background: #343439;
+  resize: none;
+  width: 95%;
+  margin: auto;
+  border-color: #585973;
+  margin-top: 5px;
+}
+.tabeebChatPanel textarea::-webkit-input-placeholder {
+  color: #767999;
+  text-align: center;
+}
+.tabeebChatPanel textarea::-moz-placeholder {
+  color: #767999;
+  text-align: center;
+}
+.tabeebChatPanel textarea:-ms-input-placeholder {
+  color: #767999;
+  text-align: center;
+}
+.tabeebChatPanel .tabeebChatMessagesContainer {
+  padding: 0 15px;
+  padding-bottom: 25px;
+  height: 100%;
+  justify-content: flex-end;
+  margin-bottom: 0;
+}
+.tabeebChatPanel .tabeebChatMessagesContainer li {
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+  margin-top: 5px;
+}
+.tabeebChatPanel .tabeebChatMessagesContainer .tabeebDateTime {
+  width: 100%;
+  text-align: center;
+  color: #95979d;
+  margin: auto;
+  margin-top: 15px;
+  display: block;
+}
+.tabeebChatPanel .tabeebChatMessagesContainer .tabeebChatName {
+  font-style: italic;
+  color: gray;
+  font-size: 75%;
+}
+.tabeebChatPanel .tabeebChatMessagesContainer {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.tabeebChatPanel .tabeebAvatar {
+  max-width: 40px;
+  max-height: 40px;
+}
+.tabeebChatPanel .tabeebAvatar span {
+  font-size: 13px;
+}
+.tabeebChatPanel .tabeebAvatar img {
+  border-radius: 50%;
+  max-width: 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.tabeebChatPanel .tabeebChatMessageText {
+  background: #343439;
+  color: #ffffff;
+  padding: 10px 5px;
+  border-radius: 3px;
+  margin-left: 15px;
+  word-break: break-all;
+}
+.tabeebSidebarContainer {
+  height: 100%;
+  display: inline;
+  float: right;
+  color: #ffffff;
+  background: #3c3e43;
+}
+.tabeebSidebarContainer .tabeebSidebarTab {
+  display: none;
+}
+.tabeebSidebarContainer[data-tab='users'] .tabeebSidebarUsersTab {
+  display: block;
+}
+.tabeebSidebarContainer .row {
+  max-width: none !important;
+}
+.tabeebActivitiesPanel {
+  padding: 0 0 25px 0;
+  height: 100%;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  overflow-y: auto;
+}
+.tabeebActivitiesPanel .tabeebBlankAvatar {
+  max-width: 40px;
+  max-height: 40px;
+}
+.tabeebActivitiesPanel .tabeebBlankAvatar span {
+  font-size: 12px;
+}
+.tabeebActivitiesPanel li {
+  padding: 7px;
+  width: 100%;
+  display: block;
+}
+.tabeebActivitiesPanel li:hover {
+  background: #5a5a5a;
+}
+.tabeebActivitiesPanel li .tabeebActivitiesMessage {
+  margin-left: 15px;
+}
+.tabeebActivitiesPanel li .tabeebActivitiesMessage img,
+.tabeebActivitiesPanel li .tabeebActivitiesMessage .tabeebBlankAvatar {
+  margin-right: 15px;
+}
+.tabeebActivitiesPanel li .tabeebActivitiesPageNumber,
+.tabeebActivitiesPanel li .tabeebDateTime {
+  padding-bottom: 15px;
+  border-bottom: 1px solid lightslategray;
+}
+.tabeebActivitiesPanel li .tabeebActivitiesPageNumber {
+  color: #d7a55a;
+  display: inline-block;
+  width: 50%;
+  padding-left: 70px;
+}
+.tabeebActivitiesPanel li .tabeebDateTime {
+  color: #aaaaaa;
+  display: inline-block;
+  width: 50%;
+  padding-right: 15px;
+  text-align: right;
+}
+.tabeebActivitiesPanel .tabeebActivitiesAlignWithAvatar {
+  padding-left: 55px;
+}
+.tabeebActivitiesPanel .tabeebTodayIndicator {
+  background: #3dba8f;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  margin-left: 5px;
+}
+.tabeebActivitiesPanel .tabeebActivitiesPlayButton {
+  font-family: 'tabeeb';
+  cursor: pointer;
+  display: inline-table;
+  margin-right: 10px;
+  background: #d86464;
+  border-radius: 50%;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  color: white;
+}
+.tabeebActivitiesPanel .tabeebActivitiesLockedControls {
+  padding-left: 70px;
+}
+.tabeebSidebarActivitiesTab button.btn {
+  background: none;
+  border: 1px solid #505050;
+  color: #7b9097;
+}
+.tabeebSidebarActivitiesTab button.btn.active {
+  color: #54cf99;
+}
+.tabeebSidebarActivitiesTab .tabeebCurrentPageButton {
+  min-width: 100px;
+}
+.tabeebSidebarActivitiesTab .tabeebAllPagesButton {
+  min-width: 100px;
+}
+.tabeebPreviewMessage {
+  color: gray;
+  white-space: pre;
+}
+.tabeebFlex {
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+}
+.tabeebActivitiesUserFilter.open button.btn {
+  border: none;
+  color: #54cf99;
+  background: none;
+}
+.tabeebActivitiesUserFilter button.btn {
+  border: none;
+  color: #54cf99;
+}
+.spectating .tabeebActivitiesPanel {
+  cursor: not-allowed;
+}
+.pagePlugin:not(.presenting) .tabeebPresenterModeButton {
+  display: none !important;
+}
+.pagePlugin:not(.spectating) .tabeebSpectatorModeButton {
+  display: none !important;
+}
+.spectating .tabeebPresenterModeButton {
+  display: none !important;
+}
+.presenting .tabeebSpectatorModeButton {
+  display: none !important;
+}
+.offline .tabeebUserOnlineButton {
+  display: none !important;
+}
+.pagePlugin.spectating .tabeebHideOnPresentationMode,
+.pagePlugin.presenting .tabeebHideOnPresentationMode {
+  display: none !important;
+}
+.tabeebSidebarPanel {
+  width: 100%;
+  -moz-user-select: text;
+  -khtml-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.tabeebRoundedUserAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.nav.nav-tabs li a {
+  padding: 5px 15px;
+  color: #7b9097;
+}
+.nav.nav-tabs li a:hover {
+  background: none !important;
+}
+.nav.nav-tabs li.active a {
+  color: #54cf99;
+}
+.nav.nav-tabs li.active a:hover {
+  background: white !important;
+}

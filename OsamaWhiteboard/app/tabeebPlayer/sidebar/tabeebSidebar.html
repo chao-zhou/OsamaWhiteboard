@@ -1,0 +1,119 @@
+<div class="tabeebSidebarTab tabeebSidebarUsersTab" data-tab-name="social">
+    <div class="container-fluid" style="padding: 0;">
+        <div class="tabeebSocialTabControls" style="display: table; width: 100%;">
+            <div class="col-xs-12">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a class="tabeebCustomColor"><span class="icon-collaborators" style="font-family: 'tabeeb';"></span>&nbsp; Participants</a></li>
+                    <li role="presentation"><a data-tab-change="activities"><span class="glyphicon glyphicon-list"></span> Activities</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tabeebPresentationPanel tabeebSidebarPanel" style="display: none; border-bottom: none;">
+            <div class="tabeebControls">
+                <div class="col-xs-3" style="font-size: 12px;">
+                    <div class="tabeebPresentationTopControls tabeebPresenterModeButton">
+                        <div class="tabeebMuteAllAudio" style="color: #c9c0a4; line-height: 32px; cursor: pointer;">Mute All</div>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="tabeebPresenterModeButton tabeebControl tabeebToggleAudioButton tabeebAudioIndicator icon-mic"></div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="tabeebPresenterModeButton tabeebControl tabeebToggleVideoButton tabeebVideoIndicator icon-videocam"></div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="tabeebControl tabeebPresenterModeButton tabeebEndCallButton icon-phone"></div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="tabeebControl tabeebPresenterModeButton tabeebToggleMuteButton icon-draw-mode"></div>
+                </div>
+            </div>
+            <div class="tabeebPresenterUserContainer col-xs-12">
+                <video autoplay oncontextmenu="return false;" class="tabeebPresenterVideo" style="display: none;"></video>
+                <img src="" class="tabeebUserAvatar">
+                <div class="tabeebBlankAvatar" style="margin-top: 5px;"><span>UI</span></div>
+                <span class="tabeebPresenterName"></span>
+
+            </div>
+
+            <div class="tabeebPresenterModeButton tabeebPresenterBottomControls">
+                <!--<span class="tabeebMuteAllVideo" style="color: #c9c0a4">Mute All Video</span>-->
+                <br>
+                <div class="tabeebShareControlsContainer">
+
+                    <button class="tabeebShareIndicatorText btn btn-no-decoration btn-sm" type="button" style="cursor: default;">
+                        Share Screen
+                    </button>
+
+                    <div class="btn btn-sm btn-tabeeb tabeebShareScreenButton">SHARE</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tabeebUsersPanel tabeebScrollable tabeebSidebarPanel">
+            <div class="col-xs-12 disabled" style="overflow: hidden; max-height: 1.25em;">
+                <span class="tabeebCurrentlySpeaking" style="padding-left: 25px; position: relative;">&nbsp;</span>
+            </div>
+            <div class="col-xs-6 tabeebUserContainer">
+                <div class="tabeebInviteUser">
+                    <span>+</span>
+                </div>
+            </div>
+            <!--<div class="col-xs-12 col-md-6 tabeebCallButton" style="cursor: pointer;">-->
+                <!--<span>Connect</span>-->
+            <!--</div>-->
+        </div>
+
+        <div class="tabeebChatPanel tabeebSidebarPanel">
+            <div class="tabeebChatPanelHeader" style="border-bottom: 1px solid gray; width: 90%; margin: auto;">
+                <div class="col-xs-6">
+                    <span class="icon-chat-logo"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chat
+                </div>
+                <div class="col-xs-6">
+                    <!--<div data-tab-change="activities">-->
+                        <!--<span class="icon-draw-mode"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notes-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <ul class="tabeebChatMessagesContainer tabeebScrollable">
+            </ul>
+            <textarea class="chatMessageInput form-control"
+                      maxlength="1000"
+                      name="tarChatBox"
+                      style="height: 40px;"
+                      placeholder="Send message here..."></textarea>
+        </div>
+    </div>
+</div>
+<div class="tabeebSidebarTab tabeebSidebarActivitiesTab" data-tab-name="activities">
+    <div class="container-fluid" style="padding: 0;">
+        <div class="col-xs-12 tabeebActivitiesHeader">
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a data-tab-change="social"><span class="icon-collaborators" style="font-family: 'tabeeb';"></span>&nbsp; Participants</a></li>
+                <li role="presentation" class="active"><a class="tabeebCustomColor"><span class="glyphicon glyphicon-list"></span> Activities</a></li>
+            </ul>
+
+            <h5>Activities</h5>
+            <div class="btn-group" role="group" aria-label="..." style="margin-bottom: 15px;">
+                <button type="button" class="btn btn-default tabeebCurrentPageButton tabeebCustomColorOnActive">Current Page</button>
+                <button type="button" class="btn btn-default tabeebAllPagesButton active tabeebCustomColorOnActive">All</button>
+            </div>
+            <br>
+            <div class="btn-group tabeebActivitiesUserFilter" style="margin-bottom: 15px;">
+                <span style="color: rgb(124, 145, 153);">By Name:</span>
+                <button type="button" class="btn btn-default dropdown-toggle tabeebCustomColor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="float: none;">
+                    Everyone <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu tabeebActivitiesFilterList">
+                    <li><a>Everyone</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 tabeebSidebarPanel tabeebScrollable" style="padding: 0;">
+            <ul class="tabeebActivitiesPanel">
+            </ul>
+        </div>
+    </div>
+</div>

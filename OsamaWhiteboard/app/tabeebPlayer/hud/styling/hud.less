@@ -1,0 +1,55 @@
+//<editor-fold name="Common HUD Styling">
+
+.tabeebHUD {
+  border-radius: 3px;
+  background: @hud-background-color;
+  opacity: 0.5;
+  width: @hud-button-size;
+  height: @hud-button-size;
+  font-size: @button-font-size;
+  line-height: @hud-button-size;
+  transition: opacity .2s ease-in;
+  position: absolute;
+  color: @default-font-color;
+  z-index: 10;
+
+  &:hover {
+    opacity: 1
+  }
+
+  &.active {
+    background: @active-hud-color;
+    opacity: 1;
+  }
+
+  &.disabled, .disabled {
+    color: @button-disabled-color !important;
+    cursor: no-drop;
+  }
+
+  div, span {
+    cursor: pointer;
+  }
+}
+
+.tabeebDrawModeButton {
+  z-index: 5;
+}
+
+//</editor-fold>
+
+@import "audiohud.less";
+@import "controlbar.less";
+@import "navigationbar.less";
+
+.mobile {
+  .tabeebHideOnMobile {
+    display: none !important;
+  }
+}
+
+.tabeebTextMode {
+  .tabeebOptionsButton, .tabeebPenButton, .tabeebShapeOptionsButton, .tabeebDrawMode, .tabeebZoomInButton, .tabeebZoomOutButton, .tabeebZoomIndicator, .tabeebNavigationButton.tabeebHotspotButton {
+    display: none !important;
+  }
+}

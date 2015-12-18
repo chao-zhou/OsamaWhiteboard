@@ -1,0 +1,104 @@
+@import "variables.less";
+
+@message-background: rgb(52, 52, 57);
+@message-color: white;
+@place-holder-text-color: rgb(118, 121, 153);
+
+.tabeebChatPanel {
+
+  .tabeebChatPanelHeader {
+    display: table;
+    width: 100%;
+    padding: 5px 0;
+    span {
+      font-family: @iconFontFamily;
+      font-size: 16px;
+    }
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  textarea {
+
+    color: white;
+    background: @message-background;
+    resize: none;
+    width: 95%;
+    margin: auto;
+    border-color: rgb(88, 89, 115);
+    margin-top: 5px;
+
+    &::-webkit-input-placeholder {
+      color: @place-holder-text-color;
+      text-align: center;
+    }
+    &::-moz-placeholder {
+      color: @place-holder-text-color;
+      text-align: center;
+    }
+    &:-ms-input-placeholder {
+      color: @place-holder-text-color;
+      text-align: center;
+    }
+  }
+
+  .tabeebChatMessagesContainer {
+    padding: 0 15px;
+    padding-bottom: 25px;
+    height: 100%;
+    justify-content: flex-end;
+    margin-bottom: 0;
+
+    li {
+      display: -webkit-flex; /* Safari */
+      display: flex;
+      margin-top: 5px;
+
+    }
+
+    .tabeebDateTime {
+      width: 100%;
+      text-align: center;
+      color: rgb(149, 151, 157);
+      margin: auto;
+      margin-top: 15px;
+      display: block;
+    }
+
+    .tabeebChatName {
+      font-style: italic;
+      color: gray;
+      font-size: 75%;
+    }
+  }
+
+  .tabeebChatMessagesContainer {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .tabeebAvatar {
+    max-width: @avatar-icon-size;
+    max-height: @avatar-icon-size;
+    span {
+      font-size: 13px;
+    }
+    img {
+      border-radius: 50%;
+      max-width: @avatar-icon-size;
+      display: block;
+      width: @avatar-icon-size;
+      height: @avatar-icon-size;
+    }
+  }
+
+  .tabeebChatMessageText {
+    background: @message-background;
+    color: @message-color;
+    padding: 10px 5px;
+    border-radius: 3px;
+    margin-left: 15px;
+    word-break: break-all;
+  }
+
+}

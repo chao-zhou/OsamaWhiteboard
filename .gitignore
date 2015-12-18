@@ -1,8 +1,8 @@
 #tabeeb
-**/tabeebPlayer/**/*
-!**/tabeebPlayer/**/readme.txt
-**/tabeebConnect/**/*
-!**/tabeebConnect/**/readme.txt
+!**/tabeebPlayer/**/*
+**/tabeebPlayer/**/readme.txt
+!**/tabeebConnect/**/*
+**/tabeebConnect/**/readme.txt
 
 #VisualStudio
 *.suo

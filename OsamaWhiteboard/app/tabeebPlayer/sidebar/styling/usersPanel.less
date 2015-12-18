@@ -1,0 +1,190 @@
+@import "variables.less";
+
+
+@invite-bg-color: rgb(71, 73, 86);
+
+.mobile {
+  .tabeebUsersPanel {
+    .tabeebUser {
+      .tabeebPanelControls {
+        div {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.tabeebUsersPanel {
+  overflow-y: auto;
+  padding-top: 15px;
+
+  .tabeebCurrentlySpeaking {
+    color: lightgray;
+    font-size: 11px;
+  }
+
+  .tabeebCurrentlySpeaking span {
+    font-family: @iconFontFamily;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: -8px;
+  }
+
+  div {
+    margin: 5px 0;
+  }
+
+  .tabeebUserContainer {
+    video, object {
+      display: none !important;
+      max-width: 100%;
+    }
+    img {
+      display: block !important;
+      max-height: 100%;
+    }
+
+    &.video {
+      video, object {
+        display: block !important;
+      }
+      img {
+        display: none !important;
+      }
+    }
+  }
+
+  .tabeebUser {
+    position: relative;
+    margin-bottom: 15px;
+    background: @invite-bg-color;
+    height: 100%;
+
+    img, video, object {
+      margin: auto;
+      height: 100%;
+    }
+
+    span {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 3px 8px;
+      background: rgba(20, 20, 20, 0.5);
+      font-size: 10px;
+      word-wrap: break-word;
+      max-width: 50%;
+    }
+
+    .tabeebBlankAvatar {
+      span {
+        font-size: 16px;
+      }
+    }
+
+    .tabeebPanelControls {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-family: @iconFontFamily;
+      font-size: 16px;
+
+      div {
+        opacity: 0;
+        pointer-events: none;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+        display: inline-block;
+        background: @active-hud-color;
+        line-height: 25px;
+        text-align: center;
+        transition: opacity .2s ease-in;
+        margin: 2px;
+
+        &.disabled {
+          background: @hud-background-color;
+        }
+      }
+
+    }
+
+    &:hover {
+      .tabeebPanelControls div {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  .video {
+    .tabeebUserAvatar, .tabeebBlankAvatar {
+      display: none !important;
+    }
+  }
+
+  .tabeebInviteUser {
+    width: 100%;
+    background: @invite-bg-color;
+    height: 100%;
+    font-family: @iconFontFamily;
+    position: relative;
+    @invite-color: rgb(124, 125, 170);
+    color: @invite-color;
+    cursor: pointer;
+
+    &:hover {
+      span {
+        color: lighten(@invite-color, 10%);
+        border-color: lighten(@invite-color, 10%);
+      }
+    }
+
+    span {
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      font-size: 32px;
+      line-height: 34px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      border-radius: 50%;
+      border: 2px dashed @invite-color;
+      transition: color .2s ease-in, border-color .2s ease-in;
+    }
+  }
+
+}
+
+.tabeebOnlineIndicator {
+  display: none;
+}
+
+.presenting, .spectating {
+  .offline {
+    .tabeebOnlineIndicator {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(20, 20, 20, 0.5);
+    }
+  }
+}
+
+.audioMuted .tabeebAudioIndicator {
+  opacity: 1 !important;
+}
+
+.video .tabeebVideoIndicator {
+
+}

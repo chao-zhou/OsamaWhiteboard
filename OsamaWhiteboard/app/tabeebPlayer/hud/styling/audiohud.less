@@ -1,0 +1,92 @@
+@import "variables.less";
+
+@audioBarHeight: @hud-button-size;
+
+@fontColor: white;
+
+.tabeebAudioRecordingBar {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  height: @hud-button-size;
+  border-radius: 3px;
+
+  min-width: 200px;
+
+  opacity: 0;
+
+  transition: opacity .2s ease-in;
+
+  background: @hud-background-color;
+  color: @fontColor;
+  overflow: hidden;
+  pointer-events: none;
+
+  .tabeebVolumeIndicator {
+    max-width: 100%;
+    background: @active-hud-color;
+    height: 100%;
+  }
+
+  .tabeebAudioRecordingTimer {
+    font-size: 16px;
+    line-height: @hud-mobile-button-size;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 0;
+  }
+}
+
+.tabeebRecordingButton {
+  position: absolute;
+  color: @fontColor;
+  background: @hud-background-color;
+  bottom: 15px;
+  left: 75px;
+  font-family: @iconFontFamily;
+  text-align: center;
+  width: @hud-button-size;
+  height: @hud-button-size;
+  font-size: @button-font-size;
+  line-height: @hud-button-size;
+}
+
+.drawing .tabeebAudioRecordingBar {
+  opacity: 0 !important;
+}
+
+.tabeebRecording {
+  .tabeebRecordingButton {
+    background: @active-hud-color;
+  }
+
+  .tabeebAudioRecordingBar {
+    display: block;
+    opacity: 1 !important;
+  }
+  .tabeebNavigationBar {
+    opacity: 0 !important;
+  }
+
+  &.drawing {
+    .tabeebAudioRecordingBar {
+      opacity: 0.5 !important;
+    }
+  }
+}
+
+.tabeebAudioAnnotationBadge {
+  position: absolute;
+  pointer-events: none;
+  top: -5px;
+  right: -5px;
+  background: #0089cf;
+}
+
+.tabeebAudioPlayerContainer {
+  z-index: 10;
+}

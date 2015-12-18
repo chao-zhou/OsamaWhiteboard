@@ -1,0 +1,123 @@
+.tabeebDrawModeButton,
+.tabeebAudioGalleryButton {
+  position: absolute;
+  bottom: 15px;
+  font-family: 'tabeeb';
+  background: #4b4b4b;
+  border-radius: 3px;
+  color: #ffffff;
+  transition: opacity 0.2s ease-in;
+  text-align: center;
+}
+.tabeebDrawModeButton {
+  left: 15px;
+}
+.tabeebAudioGalleryButton {
+  right: 15px;
+}
+.mobile .tabeebDrawModeButton {
+  left: 5px;
+}
+.mobile .tabeebAudioGalleryButton {
+  right: 5px;
+}
+.mobile .tabeebControlBar {
+  font-size: 20px !important;
+  line-height: 30px !important;
+}
+.tabeebControlBarButtonContainer {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+}
+.tabeebControlBarButtonContainer.vertical {
+  display: block;
+}
+.tabeebControlBarButtonContainer.horizontal {
+  display: inline-block;
+}
+.tabeebControlBar {
+  position: absolute;
+  font-family: 'tabeeb';
+  font-size: 20px;
+  opacity: 0;
+  height: auto;
+}
+.tabeebControlBar .tabeebControlBarItems {
+  display: inline-table;
+  background: #4b4b4b;
+}
+.tabeebControlBar .tabeebControlBarItems div {
+  opacity: 0.9;
+  transition: opacity 0.2s ease-in;
+}
+.tabeebControlBar .tabeebControlBarItems div:hover {
+  opacity: 1;
+}
+.tabeebControlBar .tabeebControlBarItems {
+  display: table;
+  border-radius: 3px;
+}
+.tabeebControlBar .tabeebDecoratedButton {
+  font-size: 26px;
+  display: inline-table !important;
+}
+.tabeebControlBar.vertical {
+  max-width: 50px;
+}
+.tabeebControlBar.vertical .tabeebControlBarButtonContainer.tabeebDecoratedButton {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  width: 95% !important;
+  padding: 5px 0;
+}
+.tabeebControlBar.vertical .tabeebControlBarItems {
+  border-top: 8px solid #c8d90d;
+}
+.tabeebControlBar.horizontal {
+  max-height: 50px;
+}
+.tabeebControlBar.horizontal .tabeebControlBarButtonContainer {
+  display: inline-block;
+}
+.tabeebControlBar.horizontal .tabeebControlBarButtonContainer.tabeebDecoratedButton {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  height: 95% !important;
+  padding: 0 5px;
+  display: inline-block;
+}
+.tabeebControlBar.horizontal .tabeebControlBarItems {
+  display: inline-table;
+  border-right: 8px solid #c8d90d;
+}
+.tabeebDrawModeButton,
+.tabeebDrawingPalette,
+.tabeebShapeOptions,
+.tabeebControlBar {
+  transition: opacity 0.2s ease-in;
+  font-family: "tabeeb";
+}
+.tabeebDrawingPalette {
+  position: absolute;
+  display: table;
+}
+.tabeebDrawingPalette .tabeebPaletteColor:hover {
+  border: 2px solid lightgray;
+  opacity: 0.75;
+}
+.tabeebShapeOptions {
+  position: absolute;
+  display: table;
+}
+.tabeebShapeOptions .tabeebShapeItem:hover {
+  opacity: 0.75;
+}
+.drawing .tabeebHUD {
+  pointer-events: none !important;
+  opacity: 0.5;
+}
+.tabeebGalleryScreen .tabeebHUD {
+  display: none !important;
+}
