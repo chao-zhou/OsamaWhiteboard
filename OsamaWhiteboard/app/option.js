@@ -15,10 +15,11 @@
             console.log("loaded");
             var page = pageManager.imagePage();
             tabeebPlayer.setContent(page);
-            //Delay 1 second to make sure player is ready.
-            setTimeout(function () {
+            tabeebPlayer.onReady(function () {
                 tabeebPlayer.swapOutImageForPdf(pageManager.pdfURL, pageManager.pageNumber);
-            }, 1000);
+            });
+            //Delay 1 second to make sure player is ready.
+
         },
         error: function () { console.log("error"); },
         galleryRequested: function () {

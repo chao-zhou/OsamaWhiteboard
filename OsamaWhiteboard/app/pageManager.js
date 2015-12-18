@@ -1,14 +1,14 @@
 ﻿(function () {
     PageManager = function (opt) {
         this.origin = location.origin;
-        this.previewImageURL = this.origin + "/app/res/test.png";
-        this.pdfURL = this.origin + "/app/res/test.pdf";
+        this.previewImageURL = "https://api.qunitjs.com/jquery-wp-content/themes/jquery/images/logo-qunit@2x.png";
+        this.pdfURL = "https://modelica.org/events/modelica2012/authors-guide/example-abstract.pdf";
 
         this.pageWidth = 595;
         this.pageHeight = 841;
         this.pageCount = 27;
         this.pageNumber = 1;
-    }
+    };
 
     PageManager.prototype.setPageNumber = function (val) {
         if (val < 1) {
