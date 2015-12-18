@@ -849,9 +849,12 @@
     <Content Include="app\libraries\dist\libraries.min.js">
       <DependentUpon>libraries.js</DependentUpon>
     </Content>
+    <Content Include="app\option.js" />
+    <Content Include="app\playerOptionBuilder.js" />
     <Content Include="app\res\test.png">
       <BrowseToURL>~/app/res/test.png</BrowseToURL>
     </Content>
+    <Content Include="app\pageManager.js" />
     <Content Include="app\tabeebConnect\app.bundle.js" />
     <Content Include="app\tabeebConnect\config.js" />
     <Content Include="app\tabeebConnect\jitsimeetEvents.js" />
